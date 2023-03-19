@@ -10,7 +10,7 @@ summary: '在日常开发过程中的一个bug排查发现Click事件并没有�
 
 页面上有一个带有全屏蒙层的弹窗 A，弹窗的按钮点击之后会创建一个新的带全屏蒙层弹窗 B，同时弹窗 A 消失。弹窗 A 的按钮上绑定了 touchend 事件，弹窗 B 的按钮和蒙层都上绑定了 click 事件，按钮的 click 事件会触发一定的业务逻辑，B 的蒙层的 click 事件会让整个弹窗消失，从 DOM 结构中移除。页面结构抽象起来大致如下，两个占满全屏的弹窗 AB：
 
-![h5_click_event.png](../images/h5_click_event.png)
+![h5_click_event.png](/static/resources/h5_click_event.png)
 
 令人疑惑的现象是：当我点击了弹窗 A 的按钮之后，弹窗 B 没有出现，通过 log 发现是触发了弹窗 B 的蒙层的 Click 事件，导致弹窗 B 从 DOM 中移除了。如果到这里你已经知道是什么原因导致的了，那么可以不需要继续往下阅读了。如果你还是一头雾水，欢迎继续阅读。
 

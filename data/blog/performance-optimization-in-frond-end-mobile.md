@@ -200,5 +200,5 @@ function MyComponent() {
 
 > 需要客户端的配合
 
-![fe_performance.png](../images/fe_performance.png)
+![fe_performance.png](/static/resources/fe_performance.png)
 将数据获取的时机从 JS 执行完提前到页面路由阶段，优化掉红色部分的时间

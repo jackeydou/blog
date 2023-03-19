@@ -217,7 +217,7 @@ function _doSend(message, responseCallback) {
 
 调用`callHandler`，会生成一个 message 结构，添加到定义好的`sendMessageQueue`这个数组中。如果有`responseCallback`的话，将`responseCallback`添加到全局的`responseCallbacks`对象中，以便后面接收到 native 的执行完 jsb 触发回调函数执行。然后修改 iframe 的 src 属性，触发 Native 捕获 URL。message 结构如下：
 
-![jsb1.png](../images/jsb1.png)
+![jsb1.png](/static/resources/jsb1.png)
 
 这次设置的 URL 是`https://__wvjb_queue_message__` , 上面提到过 webview 会检查这次的调用是不是 jsbridge 相关的 url，这次的 URL 也明显满足触发 bridge 相关事件，会调用 `WKFlushMessageQueue` 函数（函数见下方），获取到 JS 侧的`sendMessageQueue`中的所有 message（`[_webView evaluateJavaScript:[_base webViewJavascriptFetchQueyCommand]` 实际上是让 JS 执行`_fetchQueue`方法获取`sendMessageQueue`中的所有 message 传递给 Native）
 
@@ -309,11 +309,11 @@ function _doDispatchMessageFromObjC() {
 
 整体的流程梳理成图就如下：
 
-![jsb2.png](../images/jsb2.png)
+![jsb2.png](/static/resources/jsb2.png)
 
 Native 调用 JS 注册的 Bridge 的逻辑是相似的，不过就不是通过触发 iframe 的 src 触发执行的了，因为 Native 可以自己主动调用 JS 侧的方法。通过代码可以看出来 JS 和 Native 两侧注册的变量和函数都是对称的，所以 Native 调用 JS 的过程这里就不继续了。大概流程如下：
 
-![jsb3.png](../images/jsb3.png)
+![jsb3.png](/static/resources/jsb3.png)
 
 ### 为什么要用 iframe
 

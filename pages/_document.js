@@ -7,7 +7,6 @@ class MyDocument extends Document {
           <link rel="apple-touch-icon" sizes="76x76" href="/static/logo.svg" />
           <link rel="icon" sizes="32x32" href="/static/images/logo.svg" />
           <link rel="icon" sizes="16x16" href="/static/images/logo.svg" />
-          <link rel="manifest" href="/static/favicons/site.webmanifest" />
           <link rel="mask-icon" href="/static/images/logo.svg" color="#5bbad5" />
           <meta name="msapplication-TileColor" content="#000000" />
           <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
