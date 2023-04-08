@@ -9,12 +9,12 @@ dayjs.extend(timezone)
 dayjs.extend(localizedFormat)
 
 export default function CurrentTime() {
-  const [date, setDate] = useState(dayjs().tz('Asia/Shanghai').format('LTS'))
+  const [date, setDate] = useState('')
   useEffect(() => {
     const interval = setInterval(() => {
       setDate(dayjs().tz('Asia/Shanghai').format('LTS'))
     }, 1000)
     return () => clearInterval(interval)
   }, [])
-  return <div className="hidden text-sm font-semibold lg:block">Shanghai: {date}</div>
+  return date ? <div className="hidden text-sm font-semibold lg:block">Shanghai: {date}</div> : null
 }
