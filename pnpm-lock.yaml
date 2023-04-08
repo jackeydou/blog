@@ -29,6 +29,7 @@ specifiers:
   next-remote-watch: ^1.0.0
   next-themes: ^0.0.14
   postcss: ^8.4.5
+  preact: ^10.6.2
   prettier: ^2.5.1
   prettier-plugin-tailwindcss: ^0.1.4
   react: 18.2.0
@@ -65,6 +66,7 @@ dependencies:
   next: 13.3.0_hrdbe576m4w26u2yfpqpvbxyky
   next-themes: 0.0.14_yucv4tfv7v7nrkw2uguegj6e7e
   postcss: 8.4.21
+  preact: 10.13.2
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   reading-time: 1.3.0
@@ -6277,6 +6279,10 @@ packages:
       nanoid: 3.3.4
       picocolors: 1.0.0
       source-map-js: 1.0.2
+    dev: false
+
+  /preact/10.13.2:
+    resolution: {integrity: sha512-q44QFLhOhty2Bd0Y46fnYW0gD/cbVM9dUVtNTDKPcdXSMA7jfY+Jpd6rk3GB0lcQss0z5s/6CmVP0Z/hV+g6pw==}
     dev: false
 
   /prebuild-install/6.1.4:
