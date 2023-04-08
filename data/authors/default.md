@@ -26,7 +26,7 @@ Thank you for reading my self-introduction. If you are interested in me or want 
 
 As the business owner and lead frontend developer for the entire Douyin e-commerce mall front-end team, I collaborated closely with product, design, backend, testing, and data analysis teams to complete the project from scratch and drive iterative optimizations over the course of 2 years.
 
-Thanks to our team's efforts, Douyin's e-commerce business grew from 0 daily active users (DAUs) to 150 million, and gross merchandise value (GMV) increased from 0 to 800 million. As a core member of the project, I played a critical role in delivering a seamless and engaging user experience, optimizing website performance, and implementing innovative features.
+Thanks to our team's efforts, Douyin's e-commerce business became one of the most largest e-commerce platforms in China. As a core member of the project, I played a critical role in delivering a seamless and engaging user experience, optimizing website performance, and implementing innovative features.
 
 Throughout the project, I demonstrated excellent communication and leadership skills, effectively managing a team of developers and ensuring that project milestones were met on time and within budget. I am proud to have contributed to the success of one of the largest e-commerce platforms in China and look forward to leveraging my expertise to tackle new challenges and drive future growth.
 

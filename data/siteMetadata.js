@@ -1,7 +1,7 @@
 const siteMetadata = {
   title: "Jackey Dou's Blog",
   author: 'Jackey Dou',
-  headerTitle: "Jackey Dou's Blog",
+  headerTitle: "Dou's Blog",
   description: '',
   language: 'en-us',
   theme: 'system', // system, dark or light

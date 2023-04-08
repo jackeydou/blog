@@ -6,6 +6,7 @@ import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
+import CurrentTime from './CurrentTime'
 
 const LayoutWrapper = ({ children }) => {
   return (
@@ -28,6 +29,7 @@ const LayoutWrapper = ({ children }) => {
               </div>
             </Link>
           </div>
+          <CurrentTime />
           <div className="flex items-center text-base leading-5">
             <div className="hidden sm:block">
               {headerNavLinks.map((link) => (
