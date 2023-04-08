@@ -9,12 +9,18 @@ dayjs.extend(timezone)
 dayjs.extend(localizedFormat)
 
 export default function CurrentTime() {
+  const [hydrated, setHydrated] = useState(false)
   const [date, setDate] = useState('')
   useEffect(() => {
+    setHydrated(true)
+    setDate(dayjs().tz('Asia/Shanghai').format('LTS'))
     const interval = setInterval(() => {
       setDate(dayjs().tz('Asia/Shanghai').format('LTS'))
     }, 1000)
     return () => clearInterval(interval)
   }, [])
-  return date ? <div className="hidden text-sm font-semibold lg:block">Shanghai: {date}</div> : null
+  if (!hydrated) {
+    return null
+  }
+  return <div className="hidden text-sm font-semibold lg:block">Shanghai: {date}</div>
 }
