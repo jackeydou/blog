@@ -2,8 +2,7 @@
 title: vercel配置namecheap的域名
 date: '2022-12-16'
 tags: ['web-development']
-draft: true
-summary:
+summary: 研究了一下vercel如何配置NameCheap的域名
 ---
 
 Vercel 的发布部署流程非常好用，所以将 Blog 迁移到 Vercel 上部署之后，在 namecheap 上买的域名想一同配置到 vercel 上，研究了下 vercel 的配置流程
