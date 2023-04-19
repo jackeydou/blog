@@ -11,20 +11,20 @@ Vercel 的发布部署流程非常好用，所以将 Blog 迁移到 Vercel 上�
 
 1. 在具体的项目下找到 Settings -> Domain:
 
-![vercel-domain-1](../../public/static/resources/vercel-domain-1.jpg)
+![vercel-domain-1](/static/resources/vercel-domain-1.jpg)
 
 2. 在输入框中输入要绑定的域名：
-   ![vercel-domain-2](../../public/static/resources/vercel-domain-2.jpeg)
+   ![vercel-domain-2](/static/resources/vercel-domain-2.jpeg)
 
 3. 找到配置报错信息，接下来要去 namecheap 配置域名的 DNS
-   ![vercel-domain-3](../../public/static/resources/vercel-domain-3.png)
+   ![vercel-domain-3](/static/resources/vercel-domain-3.png)
 
 ## NameCheap 配置
 
 1. 找到 NameCheap 要配置的域名：
-   ![vercel-domain-4](../../public/static/resources/vercel-domain-4.png)
+   ![vercel-domain-4](/static/resources/vercel-domain-4.png)
 
 2. 更改 DNS 配置
-   ![vercel-domain-5](../../public/static/resources/vercel-domain-5.jpeg)
+   ![vercel-domain-5](/static/resources/vercel-domain-5.jpeg)
 
 配置完后等待 DNS 更新完即可。
