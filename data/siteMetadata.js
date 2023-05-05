@@ -8,7 +8,7 @@ const siteMetadata = {
   siteUrl: 'https://jackey.libertylab.icu',
   siteRepo: '',
   siteLogo: '/static/images/logo.svg',
-  image: '/static/images/avatar.png',
+  image: '/static/images/avatar.jpeg',
   socialBanner: '/static/images/logo.svg',
   email: 'jackey.dou@gmail.com',
   github: 'https://github.com/jackeydou',
