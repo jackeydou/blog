@@ -1,7 +1,7 @@
 ---
 title: SolidJS walkthrough 02 - Types in SolidJS
 date: '2023-04-08'
-tags: ['Web Development']
+tags: ['Web Development', 'Framework', 'SolidJS']
 summary: SolidJS源码系列第二篇， SolidJS内的数据结构类型
 ---
 

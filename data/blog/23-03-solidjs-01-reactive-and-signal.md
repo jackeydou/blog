@@ -1,7 +1,7 @@
 ---
 title: SolidJS walkthrough 01 - Signal and reactive programming
 date: '2023-03-11'
-tags: ['Web Development']
+tags: ['Web Development', 'Framework', 'SolidJS']
 summary: SolidJS源码系列第一篇， Signal and reactive programming
 ---
 
