@@ -11,6 +11,9 @@ module.exports = {
     './layouts/**/*.js',
     './lib/**/*.js',
     './data/**/*.mdx',
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   darkMode: 'class',
   theme: {
@@ -30,6 +33,7 @@ module.exports = {
       colors: {
         primary: colors.teal,
         gray: colors.neutral,
+        'custom-green': "#29e88c"
       },
       typography: (theme) => ({
         DEFAULT: {
