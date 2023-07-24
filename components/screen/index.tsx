@@ -1,9 +1,7 @@
 'use client'
-
-import { forwardRef, useRef, PropsWithChildren } from 'react';
-import { useInView } from 'framer-motion';
-import { clsxm } from '@/src/utils';
-
+import { forwardRef, useRef, PropsWithChildren } from 'react'
+import { useInView } from 'framer-motion'
+import { clsxm } from '@/src/utils'
 
 export const Screen = forwardRef<
   HTMLDivElement,
@@ -17,13 +15,12 @@ export const Screen = forwardRef<
   return (
     <div
       ref={ref}
-      className={clsxm(
-        'relative flex h-screen min-h-[900px] w-screen flex-col',
-        props.className,
-      )}
+      className={clsxm('relative flex h-screen min-h-[900px] w-screen flex-col', props.className)}
     >
       <span ref={inViewRef} />
       {inView && props.children}
     </div>
   )
 })
+
+Screen.displayName = 'Screen'
