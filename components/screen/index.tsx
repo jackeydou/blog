@@ -15,7 +15,7 @@ export const Screen = forwardRef<
   return (
     <div
       ref={ref}
-      className={clsxm('relative flex h-screen min-h-[900px] w-screen flex-col', props.className)}
+      className={clsxm('relative flex h-screen min-h-[900px] w-screen flex-col justify-center', props.className)}
     >
       <span ref={inViewRef} />
       {inView && props.children}

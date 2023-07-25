@@ -4,6 +4,7 @@ import { Screen } from '../screen'
 import { Wrapper } from '../home-wrapper'
 import { BubbleAnimationText } from '../bubble-text'
 import { microReboundPreset } from '@/src/constants'
+import { DownArrowIcon } from '../icons'
 
 const introText = 'Say Hi👋 from '
 const developerText = '<Developer at="Bytedance" />'
@@ -60,7 +61,7 @@ export function Intro() {
   return (
     <Screen>
       <Wrapper>
-        <div className="pl-16 flex justify-center min-h-screen w-full flex-col pt-24">
+        <div className="relative pl-16 flex justify-center min-h-screen w-full flex-col pt-24">
           <motion.div
             className="group relative"
             initial={{ opacity: 0.0001, y: 50 }}
@@ -95,6 +96,22 @@ export function Intro() {
             I'm passionate about open source, coding, and reading excellent books.
           </motion.p>
         </div>
+        <motion.div
+          className="flex absolute bottom-2 left-0 right-0 items-center flex-col"
+          initial={{ opacity: 0.001 }}
+          animate={{
+            opacity: 1,
+            transition: {
+              duration: 0.8,
+              delay: 3,
+            },
+          }}
+        >
+          <span className="text-sm text-slate-500">查看更多</span>
+          <span className="mt-8 animate-bounce">
+            <DownArrowIcon />
+          </span>
+        </motion.div>
       </Wrapper>
     </Screen>
   )
