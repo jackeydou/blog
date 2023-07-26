@@ -6,7 +6,6 @@ import Link from 'next/link'
 import { Screen } from '../screen'
 import { Wrapper } from '../home-wrapper'
 import { BubbleAnimationText } from '../bubble-text'
-import { microReboundPreset } from '@/src/constants'
 import { PostHeader } from '@/src/types/post'
 
 export const RecentPosts: FC<{
