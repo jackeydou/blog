@@ -19,11 +19,10 @@ export function dateSortDesc(a: string, b: string) {
 export async function getFilesFrontMatter(folder: string, limit?: number) {
   const prefixPaths = path.join(root, 'data', folder)
   const allFiles = getAllFilesRecursively(prefixPaths)
-  const files = limit ? allFiles.slice(0, limit) : allFiles
 
   const allFrontMatter: PostHeader[] = []
 
-  files.forEach((file) => {
+  allFiles.forEach((file) => {
     // Replace is needed to work on Windows
     const fileName = file.slice(prefixPaths.length + 1).replace(/\\/g, '/')
     // Remove Unexpected File
@@ -39,6 +38,16 @@ export async function getFilesFrontMatter(folder: string, limit?: number) {
       }
     }
   })
+  const sortedMatter = allFrontMatter.sort((a, b) => dateSortDesc(a.date, b.date))
+  return limit ? sortedMatter.slice(0, limit) : sortedMatter
+}
 
-  return allFrontMatter.sort((a, b) => dateSortDesc(a.date, b.date))
+export function getMarkdownFilePath(slug: string[]) {
+  const prefix = path.join(root, 'data', 'blog', ...slug)
+  const md = `${prefix}.md`
+  const mdx = `${prefix}.mdx`
+  if (fs.existsSync(md)) {
+    return md
+  }
+  return mdx
 }

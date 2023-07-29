@@ -53,7 +53,7 @@ const intro = [
     ),
   },
   {
-    text: 'INTJ / Climber / Spartan / Avid Reader / .....',
+    text: 'INTJ / Climber / Spartan / .....',
   },
 ]
 
@@ -73,11 +73,9 @@ export function Intro() {
                 return acc + (index < idx ? cur.text.length * delay : 0)
               }, 0)
               return (
-                <>
-                  <BubbleAnimationText text={it.text} initialDelay={delayTime} delay={delay}>
-                    {it.children}
-                  </BubbleAnimationText>
-                </>
+                <BubbleAnimationText key={it.text + idx} text={it.text} initialDelay={delayTime} delay={delay}>
+                  {it.children}
+                </BubbleAnimationText>
               )
             })}
           </motion.div>

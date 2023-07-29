@@ -34,7 +34,7 @@ export const RecentPosts: FC<{
           {posts.map((post) => {
             return (
               <div key={post.slug} className="py-3">
-                <Link href={post.slug}>
+                <Link href={`/post/${post.slug}`}>
                   <span className="text-lg text-slate-300">{post.title}</span>
                   <span className="text-sm text-slate-500 ml-4">
                     {dayjs(post.date).format('YYYY-MM-DD')}

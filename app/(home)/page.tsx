@@ -14,11 +14,11 @@ export default async function Home() {
   const recentPosts: PostHeader[] = await getFilesFrontMatter('blog', 8)
   return (
     <main className="flex min-h-screen flex-col items-center">
-      <SideInfo />
-      <SideNav />
       <Intro />
       <RecentPosts posts={recentPosts} />
       <Experiences />
+      <SideInfo />
+      <SideNav />
     </main>
   )
 }

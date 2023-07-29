@@ -2,19 +2,20 @@ import type {FC} from 'react'
 import { motion } from 'framer-motion';
 import { GitHubIcon, TelegramIcon, TwitterIcon, MailIcon, AtomIcon } from '@/components/icons';
 import { microReboundPreset } from '@/src/constants'
+import Link from 'next/link';
 
 const socials = [{
   icon: GitHubIcon,
   name: 'Github',
-  link: '',
+  link: 'https://github.com/jackeydou',
 }, {
   icon: TwitterIcon,
   name: 'Twitter',
-  link: '',
+  link: 'https://twitter.com/L3Lom0',
 }, {
   icon: MailIcon,
   name: 'Email',
-  link: '',
+  link: 'mailto:jackey.dou@gmail.com',
 }, {
   icon: TelegramIcon,
   name: 'Telegram',
@@ -38,12 +39,9 @@ export const SocialLinks: FC<{
         socials.map((iter, idx) => {
           const SocialSvg = iter.icon;
           return (
-            <motion.a
+            <motion.div
               key={idx}
-              className="text-sm text-gray-500 transition hover:text-gray-600 inline-block px-2"
-              target="_blank"
-              rel="noopener noreferrer"
-              href={iter.link}
+              className='inline-block px-2'
               initial={{
                 opacity: 0.001,
                 transform: 'translateY(10px)'
@@ -58,10 +56,17 @@ export const SocialLinks: FC<{
                 },
               }}
             >
-              <SocialSvg
-                className="h-6 w-6 text-slate-300 transition hover:text-white"
-              />
-            </motion.a>
+              <Link
+                className="text-sm text-gray-500 transition hover:text-gray-600"
+                target="_blank"
+                rel="noopener noreferrer"
+                href={iter.link}
+              >
+                <SocialSvg
+                  className="h-6 w-6 text-slate-300 transition hover:text-white"
+                />
+              </Link>
+            </motion.div>
           );
         })
       }
