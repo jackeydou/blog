@@ -1,6 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
-import { SocialLinks } from '../social-icons'
+import { SocialLinks } from '../social-links'
 
 export function SideInfo() {
   return (

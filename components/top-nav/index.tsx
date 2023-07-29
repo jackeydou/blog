@@ -3,7 +3,8 @@ import { FC } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { microReboundPreset } from '@/src/constants'
-import { GitHubIcon, TwitterIcon, MailIcon, AtomIcon } from '@/components/icons';
+import { GitHubIcon, TwitterIcon, MailIcon, AtomIcon } from '@/components/icons'
+import { SocialIcon } from '@/components/social-icon'
 import Logo from '@/data/logo.svg'
 
 const NavItems = [
@@ -68,9 +69,15 @@ export const TopNav: FC<{}> = () => {
       <div className='flex items-center'>
         {NavItems.map((it) => {
           return (
-            <Link href={it.link} className="mx-2 text-slate-300" key={it.name}>
-              {it.icon ? <it.icon className="h-5 w-5 transition" /> : it.text}
-            </Link>
+            <div className="mx-2 text-slate-300 inline-block" key={it.name}>
+              {
+                it.icon ? 
+                  <SocialIcon icon={it.icon} link={it.link} name={it.name} tooltipSide="bottom" /> : 
+                  <Link href={it.link}>
+                    {it.text}
+                  </Link>
+              }
+            </div>
           )
         })}
       </div>
