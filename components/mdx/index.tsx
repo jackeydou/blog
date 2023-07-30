@@ -15,18 +15,18 @@ export async function MDX({sourcePath}: { sourcePath: string }) {
   })
   return (
     <article className='w-full flex flex-col pt-10'>
-      <h1 className='text-4xl'>{frontmatter.title}</h1>
-      <p className='text-slate-400 my-3'>{dayjs(frontmatter.date).format("dddd, MMM DD, YYYY")}</p>
+      <h1 className='text-4xl text-gray-900 dark:text-gray-100'>{frontmatter.title}</h1>
+      <p className='text-gray-500 dark:text-gray-400 my-3'>{dayjs(frontmatter.date).format("dddd, MMM DD, YYYY")}</p>
       <div className='pb-4 border-b border-slate-400'>
         {
           frontmatter.tags.map(tag => (
-            <Link href={`/tag/${tag}`} key={tag}>
+            <Link href={`/tag/${tag}`} key={tag} className='text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'>
               {tag}
             </Link>
           ))
         }
       </div>
-      <div className="prose max-w-none pt-4 px-2">
+      <div className="prose dark:prose-invert max-w-none pt-4 px-2">
         {content}
       </div>
     </article>

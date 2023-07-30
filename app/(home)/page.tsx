@@ -11,7 +11,7 @@ import { getFilesFrontMatter } from '@/src/utils/mdx'
 import { PostHeader } from '@/src/types/post'
 
 export default async function Home() {
-  const recentPosts: PostHeader[] = await getFilesFrontMatter('blog', 8)
+  const recentPosts: PostHeader[] = await getFilesFrontMatter(8)
   return (
     <main className="flex min-h-screen flex-col items-center">
       <Intro />

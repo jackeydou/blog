@@ -11,22 +11,22 @@ const NavItems = [
   {
     icon: HomeIcon,
     name: 'Home',
-    link: '',
+    link: '/',
   },
   {
     icon: PostsIcon,
     name: 'Posts',
-    link: '',
+    link: '/post',
   },
   {
     icon: TagIcon,
-    name: 'Tag',
-    link: '',
+    name: 'Tags',
+    link: '/tags',
   },
   {
     icon: DashboardIcon,
     name: 'Projects',
-    link: '',
+    link: '/projects',
   },
 ]
 

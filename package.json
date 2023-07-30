@@ -27,6 +27,7 @@
     "gray-matter": "^4.0.2",
     "image-size": "1.0.0",
     "jotai": "^2.2.2",
+    "lodash-es": "^4.17.21",
     "mdx-bundler": "^8.0.0",
     "next": "13.4.12",
     "next-mdx-remote": "^4.4.1",
@@ -50,6 +51,8 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^6.1.2",
+    "@types/github-slugger": "^2.0.0",
+    "@types/lodash-es": "^4.17.8",
     "@types/node": "20.4.4",
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",

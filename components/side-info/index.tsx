@@ -25,8 +25,8 @@ export function SideInfo() {
           src="/images/avatar.png"
           alt="avatar"
         />
-        <p className="text-lg mb-4">Jackey @Bytedance</p>
-        <p className="text-lg mb-4">Base in Shanghai, China</p>
+        <p className="text-lg mb-4 dark:text-white text-gray-500">Jackey @Bytedance</p>
+        <p className="text-lg mb-4 dark:text-white text-gray-500">Base in Shanghai, China</p>
         <SocialLinks initialDelay={0.7} />
         <motion.p
           className="text-sm text-slate-500 mt-3"

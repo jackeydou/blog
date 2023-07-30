@@ -4,4 +4,5 @@ export interface PostHeader {
   slug: string
   date: string
   summary?: string
+  draft?: boolean
 }
