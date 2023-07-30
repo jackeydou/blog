@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { microReboundPreset } from '@/src/constants'
 import { HomeIcon, PostsIcon, TagIcon, DashboardIcon } from '@/components/icons'
 import { SocialIcon } from '@/components/social-icon';
+import { clsxm } from '@/src/utils'
 
 
 const NavItems = [
@@ -30,10 +31,10 @@ const NavItems = [
   },
 ]
 
-export const SideNav: FC<{}> = () => {
+export const SideNav: FC<{className?: string}> = ({className}) => {
   return (
     <motion.div
-      className="fixed h-screen w-[100px] right-0 flex flex-col justify-center items-center"
+      className={clsxm("fixed h-screen w-[100px] right-0 flex-col justify-center items-center hidden", className)}
       initial={{
         opacity: 0.001,
         transform: 'translateX(30px)',

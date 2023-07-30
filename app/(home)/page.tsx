@@ -1,7 +1,3 @@
-import { PropsWithChildren } from 'react'
-import Image from 'next/image'
-import { motion } from 'framer-motion'
-import { Screen } from '@/components/screen'
 import { Intro } from '@/components/intro'
 import { SideInfo } from '@/components/side-info'
 import { SideNav } from '@/components/side-nav'
@@ -9,6 +5,7 @@ import { Experiences } from '@/components/experiences'
 import { RecentPosts } from '@/components/recent-posts'
 import { getFilesFrontMatter } from '@/src/utils/mdx'
 import { PostHeader } from '@/src/types/post'
+import { MobileNav } from '@/components/mobile/nav'
 
 export default async function Home() {
   const recentPosts: PostHeader[] = await getFilesFrontMatter(8)
@@ -17,8 +14,9 @@ export default async function Home() {
       <Intro />
       <RecentPosts posts={recentPosts} />
       <Experiences />
-      <SideInfo />
-      <SideNav />
+      <SideInfo className='md:flex'/>
+      <SideNav className='md:flex'/>
+      <MobileNav className='md:hidden'/>
     </main>
   )
 }

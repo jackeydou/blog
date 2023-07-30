@@ -1,10 +1,11 @@
 'use client'
 import { motion } from 'framer-motion'
 import { SocialLinks } from '../social-links'
+import { clsxm } from '@/src/utils'
 
-export function SideInfo() {
+export function SideInfo({className}: {className?: string}) {
   return (
-    <div className="fixed w-[360px] h-full ml-3 mt-3 flex justify-center items-center left-0">
+    <div className={clsxm("fixed w-[360px] h-full ml-3 mt-3 justify-center items-center left-0 hidden", className)}>
       <motion.div
         className="px-8 py-20 flex rounded-lg border border-slate-50 flex-col justify-center items-center"
         initial={{

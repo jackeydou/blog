@@ -1,5 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
+import { MobileSideInfo } from '../side-info/mobile'
 import { Screen } from '../screen'
 import { Wrapper } from '../home-wrapper'
 import { BubbleAnimationText } from '../bubble-text'
@@ -61,7 +62,8 @@ export function Intro() {
   return (
     <Screen>
       <Wrapper>
-        <div className="relative pl-16 flex justify-center min-h-screen w-full flex-col pt-24">
+        <div className="relative px-4 lg:pl-16 flex justify-center min-h-screen w-full flex-col lg:pt-24">
+          <MobileSideInfo className='md:hidden' />
           <motion.div
             className="group relative"
             initial={{ opacity: 0.0001, y: 50 }}
@@ -73,14 +75,21 @@ export function Intro() {
                 return acc + (index < idx ? cur.text.length * delay : 0)
               }, 0)
               return (
-                <BubbleAnimationText key={it.text + idx} text={it.text} initialDelay={delayTime} delay={delay}>
+                <BubbleAnimationText 
+                  key={it.text + idx}
+                  text={it.text}
+                  initialDelay={delayTime}
+                  delay={delay}
+                  spanClassName='text-xl lg:text-2xl'
+                  className='justify-center lg:justify-normal'
+                >
                   {it.children}
                 </BubbleAnimationText>
               )
             })}
           </motion.div>
           <motion.p
-            className="text-slate-400 text-sm mt-10"
+            className="text-slate-400 text-sm mt-10 text-center lg:text-left"
             initial={{ transform: 'translateY(10px)', opacity: 0.001 }}
             animate={{
               transform: 'translateY(0px)',
