@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { GitHubIcon, TwitterIcon, MailIcon, AtomIcon } from '@/components/icons'
 import { SocialIcon } from '@/components/social-icon'
 import Logo from '@/data/logo.svg'
+import { clsxm } from '@/src/utils'
 
 const NavItems = [
   {
@@ -39,9 +40,9 @@ const NavItems = [
 ]
 
 
-export const TopNav: FC<{}> = () => {
+export const TopNav: FC<{className?: string}> = ({className}) => {
   return (
-    <section className='w-full h-[50px] flex justify-between items-center'>
+    <section className={clsxm('w-full h-[50px] justify-between items-center hidden', className)}>
       <div
         className="fixed h-[50px] w-full max-w-3xl xl:max-w-4xl flex justify-between items-center bg-dark-bg z-50"
       >

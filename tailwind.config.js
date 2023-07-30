@@ -179,7 +179,7 @@ module.exports = {
       },
       animation: {
         'fadein-b': 'fadein-b 1s ease-in-out',
-        opacity: 'opacity 1s ease-in-out',
+        opacity: 'opacity 1s ease-in-out .5s forwards',
       }
     },
   },

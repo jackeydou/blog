@@ -34,13 +34,13 @@ export const MobileNav = ({className}: {className?: string}) => {
 
   return (
     <motion.nav
-      className={clsxm("fixed top-0 left-0", className)}
+      className={clsxm("fixed top-0 left-0 bottom-0 mobile-nav", className)}
       initial={false}
       animate={isOpen ? "open" : "closed"}
       custom={height}
       ref={containerRef}
     >
-      <motion.div className="background bg-dark-bg shadow" variants={sidebar} />
+      <motion.div className="mobile-nav-background bg-dark-bg" variants={sidebar} />
       <Navigation />
       <MenuToggle toggle={() => toggleOpen()} />
     </motion.nav>
