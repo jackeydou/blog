@@ -14,9 +14,9 @@ export default async function Home() {
       <Intro />
       <RecentPosts posts={recentPosts} />
       <Experiences />
-      <SideInfo className='md:flex'/>
-      <SideNav className='md:flex'/>
-      <MobileNav className='md:hidden'/>
+      <SideInfo className="md:flex" />
+      <SideNav className="md:flex" />
+      <MobileNav className="md:hidden" />
     </main>
   )
 }

@@ -1,7 +1,7 @@
 import path from 'path'
 import fs from 'fs'
 import matter from 'gray-matter'
-import { slug } from 'github-slugger'
+import { slug } from 'github-slugger-typescript'
 import { getAllFilesRecursively } from './file'
 import { PostHeader } from '../types/post'
 
@@ -17,14 +17,14 @@ export function dateSortDesc(a: string, b: string) {
   return 0
 }
 
-const frontMatterCache: Map<string, PostHeader[]> = new Map();
+const frontMatterCache: Map<string, PostHeader[]> = new Map()
 
 export async function getFilesFrontMatter(limit?: number): Promise<PostHeader[]> {
   const prefixPaths = path.join(root, 'data', 'blog')
   const allFiles = getAllFilesRecursively(prefixPaths)
   const key = `key_${allFiles.length}`
   if (frontMatterCache.get(key)) {
-    const frontmatter = frontMatterCache.get(key)!;
+    const frontmatter = frontMatterCache.get(key)!
     return limit ? frontmatter.slice(0, limit) : frontmatter
   }
   const allFrontMatter: PostHeader[] = []
@@ -46,17 +46,16 @@ export async function getFilesFrontMatter(limit?: number): Promise<PostHeader[]>
     }
   })
   const sortedMatter = allFrontMatter.sort((a, b) => dateSortDesc(a.date, b.date))
-  frontMatterCache.set(key, sortedMatter);
+  frontMatterCache.set(key, sortedMatter)
   return limit ? sortedMatter.slice(0, limit) : sortedMatter
 }
-
 
 export const kebabCase = (str: string) => slug(str)
 
 export async function getTags() {
-  const frontmatter = await getFilesFrontMatter();
+  const frontmatter = await getFilesFrontMatter()
   const tagCount: Record<string, number> = {}
-  frontmatter.forEach(it => {
+  frontmatter.forEach((it) => {
     if (it.tags && it.draft !== true) {
       it.tags.forEach((tag) => {
         const formattedTag = kebabCase(tag)

@@ -4,9 +4,8 @@ import { FC } from 'react'
 import { motion } from 'framer-motion'
 import { microReboundPreset } from '@/src/constants'
 import { HomeIcon, PostsIcon, TagIcon, DashboardIcon } from '@/components/icons'
-import { SocialIcon } from '@/components/social-icon';
+import { SocialIcon } from '@/components/social-icon'
 import { clsxm } from '@/src/utils'
-
 
 const NavItems = [
   {
@@ -31,10 +30,13 @@ const NavItems = [
   },
 ]
 
-export const SideNav: FC<{className?: string}> = ({className}) => {
+export const SideNav: FC<{ className?: string }> = ({ className }) => {
   return (
     <motion.div
-      className={clsxm("fixed h-screen w-[100px] right-0 flex-col justify-center items-center hidden", className)}
+      className={clsxm(
+        'fixed h-screen w-[100px] right-0 flex-col justify-center items-center hidden',
+        className
+      )}
       initial={{
         opacity: 0.001,
         transform: 'translateX(30px)',
@@ -52,7 +54,13 @@ export const SideNav: FC<{className?: string}> = ({className}) => {
       <div className="border border-slate-100 w-9 flex flex-col items-center rounded-full py-3">
         {NavItems.map((it) => {
           return (
-            <SocialIcon key={it.name} icon={it.icon} name={it.name} link={it.link} tooltipSide='left'/>
+            <SocialIcon
+              key={it.name}
+              icon={it.icon}
+              name={it.name}
+              link={it.link}
+              tooltipSide="left"
+            />
           )
         })}
       </div>

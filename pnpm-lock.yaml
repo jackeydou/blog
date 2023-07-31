@@ -41,6 +41,9 @@ dependencies:
   github-slugger:
     specifier: ^1.3.0
     version: 1.5.0
+  github-slugger-typescript:
+    specifier: ^1.1.0
+    version: r2.cnpmjs.org/github-slugger-typescript@1.1.0
   gray-matter:
     specifier: ^4.0.2
     version: 4.0.3
@@ -118,9 +121,6 @@ devDependencies:
   '@svgr/webpack':
     specifier: ^6.1.2
     version: 6.5.1
-  '@types/github-slugger':
-    specifier: ^2.0.0
-    version: 2.0.0
   '@types/lodash-es':
     specifier: ^4.17.8
     version: 4.17.8
@@ -2451,13 +2451,6 @@ packages:
   /@types/estree@1.0.0:
     resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}
 
-  /@types/github-slugger@2.0.0:
-    resolution: {integrity: sha512-z/FaJhjFPk5mtrsZWeqyvaJdcZKw6CVCTuynEMrcXtgyozN3yMrtL13xWv8uQV2bWtwSXkdiNM37HEKkEj9x1Q==}
-    deprecated: This is a stub types definition. github-slugger provides its own type definitions, so you do not need this installed.
-    dependencies:
-      github-slugger: 1.5.0
-    dev: true
-
   /@types/hast@2.3.4:
     resolution: {integrity: sha512-wLEm0QvaoawEDoTRwzTXp4b4jpwiJDvR5KMnFnVodm3scufTlBOWRD6N1OBf9TZMhjlNsSfcO5V+7AF4+Vy+9g==}
     dependencies:
@@ -4464,6 +4457,7 @@ packages:
 
   /github-slugger@1.5.0:
     resolution: {integrity: sha512-wIh+gKBI9Nshz2o46B0B3f5k/W+WI9ZAv6y5Dn5WJ5SK1t0TnDimB4WE5rmTD05ZAIn8HALCZVmCsvj0w0v0lw==}
+    dev: false
 
   /github-slugger@2.0.0:
     resolution: {integrity: sha512-IaOQ9puYtjrkq7Y0Ygl9KDZnrf/aiUJYUpVf89y8kyaxbRG7Y1SrX/jaumrv81vc61+kiMempujsM3Yw7w5qcw==}
@@ -8544,6 +8538,15 @@ packages:
     dev: false
     optional: true
 
+  r2.cnpmjs.org/@types/emoji-regex@9.2.0:
+    resolution: {integrity: sha512-Q2BaUWiokKV2ZWk15twerRiNIex/VOGIz3pAgPMk6JZAeuGT9oAm/kA2Ri9InUtPc84bY0UQZzn/Pd2yUd33Ig==, registry: https://r.cnpmjs.org/, tarball: https://r2.cnpmjs.org/@types/emoji-regex/-/emoji-regex-9.2.0.tgz}
+    name: '@types/emoji-regex'
+    version: 9.2.0
+    deprecated: This is a stub types definition. emoji-regex provides its own type definitions, so you do not need this installed.
+    dependencies:
+      emoji-regex: r2.cnpmjs.org/emoji-regex@9.2.2
+    dev: false
+
   r2.cnpmjs.org/@types/hast@2.3.4:
     resolution: {integrity: sha512-wLEm0QvaoawEDoTRwzTXp4b4jpwiJDvR5KMnFnVodm3scufTlBOWRD6N1OBf9TZMhjlNsSfcO5V+7AF4+Vy+9g==, registry: https://r.cnpmjs.org/, tarball: https://r2.cnpmjs.org/@types/hast/-/hast-2.3.4.tgz}
     name: '@types/hast'
@@ -8789,6 +8792,12 @@ packages:
     version: 2.20.3
     dev: true
 
+  r2.cnpmjs.org/emoji-regex@9.2.2:
+    resolution: {integrity: sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==, registry: https://r.cnpmjs.org/, tarball: https://r2.cnpmjs.org/emoji-regex/-/emoji-regex-9.2.2.tgz}
+    name: emoji-regex
+    version: 9.2.2
+    dev: false
+
   r2.cnpmjs.org/es-module-lexer@0.9.3:
     resolution: {integrity: sha512-1HQ2M2sPtxwnvOvT1ZClHyQDiggdNjURWpY2we6aMKCQiUVxTmVs2UYPLIrD84sS+kMdUwfBSylbJPwNnBrnHQ==, registry: https://r.cnpmjs.org/, tarball: https://r2.cnpmjs.org/es-module-lexer/-/es-module-lexer-0.9.3.tgz}
     name: es-module-lexer
@@ -9008,6 +9017,16 @@ packages:
     os: [darwin]
     requiresBuild: true
     optional: true
+
+  r2.cnpmjs.org/github-slugger-typescript@1.1.0:
+    resolution: {integrity: sha512-SZWZ7pUeQ4IJKSAaJoGN+VuoDowdpeG4xEsl1+3phFpnZP7EmXeTNFyDTBUnq4+RE0W8A/bg0ojZJuZcGdB0rw==, registry: https://r.cnpmjs.org/, tarball: https://r2.cnpmjs.org/github-slugger-typescript/-/github-slugger-typescript-1.1.0.tgz}
+    name: github-slugger-typescript
+    version: 1.1.0
+    engines: {node: '>=10'}
+    dependencies:
+      '@types/emoji-regex': r2.cnpmjs.org/@types/emoji-regex@9.2.0
+      emoji-regex: r2.cnpmjs.org/emoji-regex@9.2.2
+    dev: false
 
   r2.cnpmjs.org/glob-to-regexp@0.4.1:
     resolution: {integrity: sha512-lkX1HJXwyMcprw/5YUZc2s7DrpAiHB21/V+E1rHUrVNokkvB6bqMzT0VfV6/86ZNabt1k14YOIaT7nDvOX3Iiw==, registry: https://r.cnpmjs.org/, tarball: https://r2.cnpmjs.org/glob-to-regexp/-/glob-to-regexp-0.4.1.tgz}

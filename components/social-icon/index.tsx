@@ -1,15 +1,14 @@
 'use client'
-import { FC, useState } from 'react'
+import React, { FC, useState } from 'react'
 import Link from 'next/link'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Tooltip } from '@/components/tooltip'
 
-
 export const SocialIcon: FC<{
-  icon: (props?: React.SVGAttributes<SVGElement>) => JSX.Element;
-  link: string;
-  name: string;
-  tooltipSide?: "top" | "right" | "bottom" | "left";
+  icon: (props?: React.SVGAttributes<SVGElement>) => React.ReactNode
+  link: string
+  name: string
+  tooltipSide?: 'top' | 'right' | 'bottom' | 'left'
 }> = (props) => {
   const [open, setOpen] = useState(false)
   return (

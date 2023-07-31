@@ -13,7 +13,7 @@ export const Experiences: FC = () => {
   return (
     <Screen className="px-8">
       <Wrapper>
-        <BubbleAnimationText text='Education & '>
+        <BubbleAnimationText text="Education & ">
           <motion.span
             className="text-custom-green text-2xl"
             initial={{
@@ -32,12 +32,10 @@ export const Experiences: FC = () => {
             Experiences
           </motion.span>
         </BubbleAnimationText>
-        <div
-          className='pt-4'
-        >
-          <ul className='timeline'>
-            <motion.li 
-              className='timeline-item px-6 pb-8'
+        <div className="pt-4">
+          <ul className="timeline">
+            <motion.li
+              className="timeline-item px-6 pb-8"
               initial={{
                 opacity: 0.001,
                 transform: 'translateY(10px)',
@@ -51,12 +49,14 @@ export const Experiences: FC = () => {
                 },
               }}
             >
-              <div className='text-slate-200 timeline-t-p text-sm'>2022.11 - <span className='text-custom-green'>present</span></div>
-              <p className='text-xl text-white my-2'>Senior Software Engineer</p>
-              <p className='text-xs text-slate-400'>Bytedance - Client Infra - Cross Platform</p>
+              <div className="text-slate-200 timeline-t-p text-sm">
+                2022.11 - <span className="text-custom-green">present</span>
+              </div>
+              <p className="text-xl text-white my-2">Senior Software Engineer</p>
+              <p className="text-xs text-slate-400">Bytedance - Client Infra - Cross Platform</p>
             </motion.li>
             <motion.li
-              className='timeline-item px-6 pb-8'
+              className="timeline-item px-6 pb-8"
               initial={{
                 opacity: 0.001,
                 transform: 'translateY(10px)',
@@ -70,14 +70,14 @@ export const Experiences: FC = () => {
                 },
               }}
             >
-              <div className='text-slate-200 timeline-t text-sm'>2019.07 - 2022.11</div>
-              <p className='text-xl text-white my-2'>Senior Frontend Engineer</p>
-              <p className='text-xs text-slate-400'>Bytedance - ECommerce</p>
-              <p className='text-xl text-white my-2'>Frontend Engineer</p>
-              <p className='text-xs text-slate-400'>Bytedance - ECommerce</p>
+              <div className="text-slate-200 timeline-t text-sm">2019.07 - 2022.11</div>
+              <p className="text-xl text-white my-2">Senior Frontend Engineer</p>
+              <p className="text-xs text-slate-400">Bytedance - ECommerce</p>
+              <p className="text-xl text-white my-2">Frontend Engineer</p>
+              <p className="text-xs text-slate-400">Bytedance - ECommerce</p>
             </motion.li>
             <motion.li
-              className='timeline-item px-6 pb-8'
+              className="timeline-item px-6 pb-8"
               initial={{
                 opacity: 0.001,
                 transform: 'translateY(10px)',
@@ -91,12 +91,12 @@ export const Experiences: FC = () => {
                 },
               }}
             >
-              <div className='text-slate-200 timeline-t text-sm'>2018.11 - 2019.06</div>
-              <p className='text-xl text-white my-2'>Frontend Engineer(Intern)</p>
-              <p className='text-xs text-slate-400'>Bytedance - ECommerce</p>
+              <div className="text-slate-200 timeline-t text-sm">2018.11 - 2019.06</div>
+              <p className="text-xl text-white my-2">Frontend Engineer(Intern)</p>
+              <p className="text-xs text-slate-400">Bytedance - ECommerce</p>
             </motion.li>
             <motion.li
-              className='timeline-item px-6 pb-8'
+              className="timeline-item px-6 pb-8"
               initial={{
                 opacity: 0.001,
                 transform: 'translateY(10px)',
@@ -110,9 +110,13 @@ export const Experiences: FC = () => {
                 },
               }}
             >
-              <div className='text-slate-200 timeline-t text-sm'>2015 - 2019</div>
-              <div className='text-xl text-white my-2'>Bachelor Degree of Computer Science</div>
-              <div className='text-xs text-slate-400'><Link href="https://zh.wikipedia.org/wiki/%E5%A4%8D%E6%97%A6%E5%A4%A7%E5%AD%A6">Fudan University</Link></div>
+              <div className="text-slate-200 timeline-t text-sm">2015 - 2019</div>
+              <div className="text-xl text-white my-2">Bachelor Degree of Computer Science</div>
+              <div className="text-xs text-slate-400">
+                <Link href="https://zh.wikipedia.org/wiki/%E5%A4%8D%E6%97%A6%E5%A4%A7%E5%AD%A6">
+                  Fudan University
+                </Link>
+              </div>
             </motion.li>
           </ul>
         </div>

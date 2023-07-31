@@ -63,7 +63,7 @@ export function Intro() {
     <Screen>
       <Wrapper>
         <div className="relative px-4 lg:pl-16 flex justify-center min-h-screen w-full flex-col lg:pt-24">
-          <MobileSideInfo className='md:hidden' />
+          <MobileSideInfo className="md:hidden" />
           <motion.div
             className="group relative"
             initial={{ opacity: 0.0001, y: 50 }}
@@ -75,13 +75,13 @@ export function Intro() {
                 return acc + (index < idx ? cur.text.length * delay : 0)
               }, 0)
               return (
-                <BubbleAnimationText 
+                <BubbleAnimationText
                   key={it.text + idx}
                   text={it.text}
                   initialDelay={delayTime}
                   delay={delay}
-                  spanClassName='text-xl lg:text-2xl'
-                  className='justify-center lg:justify-normal'
+                  spanClassName="text-xl lg:text-2xl"
+                  className="justify-center lg:justify-normal"
                 >
                   {it.children}
                 </BubbleAnimationText>

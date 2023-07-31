@@ -6,11 +6,13 @@ import Link from 'next/link'
 import { PostHeader } from '@/src/types/post'
 import { clsxm } from '@/src/utils'
 
-export const PostList: FC<PropsWithChildren<{
-  posts: PostHeader[];
-  delay?: number;
-  className?: string;
-}>> = ({ posts, className, delay = 0.8, children }) => {
+export const PostList: FC<
+  PropsWithChildren<{
+    posts: PostHeader[]
+    delay?: number
+    className?: string
+  }>
+> = ({ posts, className, delay = 0.8, children }) => {
   return (
     <motion.div
       className={clsxm('', className)}
@@ -37,7 +39,6 @@ export const PostList: FC<PropsWithChildren<{
                 {dayjs(post.date).format('YYYY-MM-DD')}
               </span>
             </Link>
-            
           </div>
         )
       })}

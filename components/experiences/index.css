@@ -16,16 +16,16 @@
 }
 
 .timeline:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   bottom: 0;
   width: 1px;
-  background-color: rgb(148, 163, 184, .5);
+  background-color: rgb(148, 163, 184, 0.5);
   transform: translateX(-50%);
   transform: scaleY(0);
   transform-origin: top left;
-  animation: .5s linear 1s alternate forwards grow;
+  animation: 0.5s linear 1s alternate forwards grow;
 }
 
 .timeline li {
@@ -34,7 +34,7 @@
 }
 
 .timeline-t-p:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 6px;
   left: 0;
@@ -46,7 +46,7 @@
 }
 
 .timeline-t:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 6px;
   left: 0;

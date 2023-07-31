@@ -1,4 +1,4 @@
-import { type IconProps } from './dashboard'
+import { type IconProps } from './type'
 
 export function DashboardIcon(props: IconProps = {}) {
   return (

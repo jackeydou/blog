@@ -13,17 +13,28 @@ export const BubbleAnimationText: FC<
     spanClassName?: string
     className?: string
   }>
-> = ({ text, delay = 0.1, initialDelay = 0, visible = true, children, spanClassName, className }) => {
+> = ({
+  text,
+  delay = 0.1,
+  initialDelay = 0,
+  visible = true,
+  children,
+  spanClassName,
+  className,
+}) => {
   if (!visible) {
     return <div />
   }
   return (
-    <div className={clsxm("flex items-center", className)}>
+    <div className={clsxm('flex items-center', className)}>
       {Array.from(text).map((it, idx) => {
         return (
           <motion.span
             key={idx}
-            className={clsxm("inline-block whitespace-pre text-white text-2xl leading-loose", spanClassName)}
+            className={clsxm(
+              'inline-block whitespace-pre text-white text-2xl leading-loose',
+              spanClassName
+            )}
             initial={{ transform: 'translateY(10px)', opacity: 0.001 }}
             animate={{
               transform: 'translateY(0px)',

@@ -3,9 +3,14 @@ import { motion } from 'framer-motion'
 import { SocialLinks } from '../social-links'
 import { clsxm } from '@/src/utils'
 
-export function SideInfo({className}: {className?: string}) {
+export function SideInfo({ className }: { className?: string }) {
   return (
-    <div className={clsxm("fixed w-[360px] h-full ml-3 mt-3 justify-center items-center left-0 hidden", className)}>
+    <div
+      className={clsxm(
+        'fixed w-[360px] h-full ml-3 mt-3 justify-center items-center left-0 hidden',
+        className
+      )}
+    >
       <motion.div
         className="px-8 py-20 flex rounded-lg border border-slate-50 flex-col justify-center items-center"
         initial={{

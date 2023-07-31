@@ -3,9 +3,9 @@ import { motion } from 'framer-motion'
 import { SocialLinks } from '../social-links'
 import { clsxm } from '@/src/utils'
 
-export function MobileSideInfo({className}: {className?: string}) {
+export function MobileSideInfo({ className }: { className?: string }) {
   return (
-    <div className={clsxm("w-full justify-center items-center flex", className)}>
+    <div className={clsxm('w-full justify-center items-center flex', className)}>
       <motion.div
         className="flex flex-col justify-center items-center pb-4"
         initial={{

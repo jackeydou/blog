@@ -1,2 +1,2 @@
-import { React } from 'react';
-export type IconProps = React.SVGAttributes<SVGElement>
+import { SVGAttributes } from 'react'
+export type IconProps = SVGAttributes<SVGElement>
