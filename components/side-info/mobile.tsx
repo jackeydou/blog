@@ -23,7 +23,7 @@ export function MobileSideInfo({ className }: { className?: string }) {
       >
         <img
           className="rounded-full overflow-hidden w-[200px] h-[200px] mb-8"
-          src="/images/avatar.png"
+          src="/images/avatar.jpg"
           alt="avatar"
         />
         <SocialLinks initialDelay={0.7} />

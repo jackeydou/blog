@@ -28,7 +28,7 @@ export function SideInfo({ className }: { className?: string }) {
       >
         <img
           className="rounded-full overflow-hidden w-[200px] h-[200px] mb-8"
-          src="/images/avatar.png"
+          src="/images/avatar.jpg"
           alt="avatar"
         />
         <p className="text-lg mb-4 dark:text-white text-gray-500">Jackey @Bytedance</p>
