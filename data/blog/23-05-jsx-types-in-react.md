@@ -1,5 +1,5 @@
 ---
-title: JSX里面哪些让人迷惑的类型们：Element、IntrinsicElements、ReactNode、ReactElement……
+title: JSX里面哪些让人迷惑的类型们
 date: '2023-05-22'
 tags: ['Web Development', 'Typescript']
 summary:
