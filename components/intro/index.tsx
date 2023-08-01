@@ -81,7 +81,7 @@ export function Intro() {
                   initialDelay={delayTime}
                   delay={delay}
                   spanClassName="text-xl lg:text-2xl"
-                  className="justify-center lg:justify-normal"
+                  className="justify-center lg:justify-normal py-1 lg:py-4"
                 >
                   {it.children}
                 </BubbleAnimationText>
