@@ -1,16 +1,16 @@
-'use client'
-import { FC, PropsWithChildren } from 'react'
-import { motion } from 'framer-motion'
-import dayjs from 'dayjs'
-import Link from 'next/link'
-import { PostHeader } from '@/src/types/post'
-import { clsxm } from '@/src/utils'
+'use client';
+import { FC, PropsWithChildren } from 'react';
+import { motion } from 'framer-motion';
+import dayjs from 'dayjs';
+import Link from 'next/link';
+import { PostHeader } from '@/src/types/post';
+import { clsxm } from '@/src/utils';
 
 export const PostList: FC<
   PropsWithChildren<{
-    posts: PostHeader[]
-    delay?: number
-    className?: string
+    posts: PostHeader[];
+    delay?: number;
+    className?: string;
   }>
 > = ({ posts, className, delay = 0.8, children }) => {
   return (
@@ -40,9 +40,9 @@ export const PostList: FC<
               </span>
             </Link>
           </div>
-        )
+        );
       })}
       {children}
     </motion.div>
-  )
-}
+  );
+};

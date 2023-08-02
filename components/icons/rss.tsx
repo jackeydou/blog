@@ -1,4 +1,4 @@
-import { type IconProps } from './type'
+import { type IconProps } from './type';
 
 export function AtomIcon(props: IconProps = {}) {
   return (
@@ -32,5 +32,5 @@ export function AtomIcon(props: IconProps = {}) {
         strokeLinejoin="round"
       />
     </svg>
-  )
+  );
 }

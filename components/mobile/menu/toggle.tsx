@@ -1,9 +1,9 @@
-import * as React from 'react'
-import { motion } from 'framer-motion'
+import * as React from 'react';
+import { motion } from 'framer-motion';
 
 const Path = (props: any) => (
   <motion.path fill="transparent" strokeWidth="3" stroke="#fff" strokeLinecap="round" {...props} />
-)
+);
 
 export const MenuToggle = ({ toggle }: { toggle: () => void }) => (
   <button onClick={toggle}>
@@ -30,4 +30,4 @@ export const MenuToggle = ({ toggle }: { toggle: () => void }) => (
       />
     </svg>
   </button>
-)
+);

@@ -1,4 +1,4 @@
-import { type IconProps } from './type'
+import { type IconProps } from './type';
 
 export function TelegramIcon(props: IconProps = {}) {
   return (
@@ -18,5 +18,5 @@ export function TelegramIcon(props: IconProps = {}) {
         strokeLinejoin="round"
       />
     </svg>
-  )
+  );
 }

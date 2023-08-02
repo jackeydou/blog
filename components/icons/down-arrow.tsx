@@ -1,4 +1,4 @@
-import { type IconProps } from './type'
+import { type IconProps } from './type';
 
 export function DownArrowIcon(props: IconProps = {}) {
   return (
@@ -12,5 +12,5 @@ export function DownArrowIcon(props: IconProps = {}) {
         d="m6 10l6 6l6-6"
       />
     </svg>
-  )
+  );
 }

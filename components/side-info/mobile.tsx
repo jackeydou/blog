@@ -1,7 +1,7 @@
-'use client'
-import { motion } from 'framer-motion'
-import { SocialLinks } from '../social-links'
-import { clsxm } from '@/src/utils'
+'use client';
+import { motion } from 'framer-motion';
+import { SocialLinks } from '../social-links';
+import { clsxm } from '@/src/utils';
 
 export function MobileSideInfo({ className }: { className?: string }) {
   return (
@@ -29,5 +29,5 @@ export function MobileSideInfo({ className }: { className?: string }) {
         <SocialLinks initialDelay={0.7} />
       </motion.div>
     </div>
-  )
+  );
 }

@@ -1,45 +1,34 @@
-'use client'
-import { FC } from 'react'
-import Link from 'next/link'
-import { GitHubIcon, TwitterIcon, MailIcon, AtomIcon } from '@/components/icons'
-import { SocialIcon } from '@/components/social-icon'
-import Logo from '@/data/logo.svg'
-import { clsxm } from '@/src/utils'
+'use client';
+import { FC } from 'react';
+import Link from 'next/link';
+import { GitHubIcon, TwitterIcon, MailIcon, AtomIcon } from '@/components/icons';
+import { SocialIcon } from '@/components/social-icon';
+import Logo from '@/data/logo.svg';
+import { clsxm } from '@/src/utils';
+import { AllNavItems } from '@/src/constants/nav';
+import { NavItemType } from '@/src/types/nav';
 
-const NavItems = [
+const NavItems: (NavItemType & { text?: string })[] = [
   {
     text: 'Posts',
+    name: 'Posts',
     link: '/post',
+    icon: () => <></>,
   },
   {
     text: 'Projects',
+    name: 'Projects',
     link: '/projects',
+    icon: () => <></>,
   },
   {
     text: 'Tags',
+    name: 'Tags',
     link: '/tags',
+    icon: () => <></>,
   },
-  {
-    icon: GitHubIcon,
-    name: 'Github',
-    link: 'https://github.com/jackeydou',
-  },
-  {
-    icon: TwitterIcon,
-    name: 'Twitter',
-    link: 'https://twitter.com/L3Lom0',
-  },
-  {
-    icon: MailIcon,
-    name: 'Email',
-    link: 'mailto:jackey.dou@gmail.com',
-  },
-  {
-    icon: AtomIcon,
-    name: 'RSS',
-    link: '',
-  },
-]
+  ...AllNavItems.filter((it) => it.type === 'top'),
+];
 
 export const TopNav: FC<{ className?: string }> = ({ className }) => {
   return (
@@ -56,17 +45,17 @@ export const TopNav: FC<{ className?: string }> = ({ className }) => {
           {NavItems.map((it) => {
             return (
               <div className="mx-2 text-slate-300 inline-block" key={it.name}>
-                {it.icon ? (
-                  <SocialIcon icon={it.icon} link={it.link} name={it.name} tooltipSide="bottom" />
-                ) : (
+                {it.text ? (
                   <Link href={it.link}>{it.text}</Link>
+                ) : (
+                  <SocialIcon icon={it.icon} link={it.link} name={it.name} tooltipSide="bottom" />
                 )}
               </div>
-            )
+            );
           })}
         </div>
       </div>
       <div className="w-full h-[50px]"></div>
     </section>
-  )
-}
+  );
+};

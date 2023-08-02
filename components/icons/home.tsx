@@ -1,4 +1,4 @@
-import { type IconProps } from './type'
+import { type IconProps } from './type';
 
 export function HomeIcon(props: IconProps = {}) {
   return (
@@ -18,5 +18,5 @@ export function HomeIcon(props: IconProps = {}) {
         strokeLinejoin="round"
       />
     </svg>
-  )
+  );
 }

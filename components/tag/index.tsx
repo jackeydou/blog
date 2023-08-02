@@ -1,6 +1,6 @@
-import { FC } from 'react'
-import Link from 'next/link'
-import { kebabCase } from '@/src/utils/mdx'
+import { FC } from 'react';
+import Link from 'next/link';
+import { kebabCase } from '@/src/utils/mdx';
 
 export const Tag: FC<{ text: string }> = ({ text }) => {
   return (
@@ -9,5 +9,5 @@ export const Tag: FC<{ text: string }> = ({ text }) => {
         {text.split(' ').join('-')}
       </span>
     </Link>
-  )
-}
+  );
+};

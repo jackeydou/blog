@@ -1,13 +1,13 @@
-'use client'
-import { FC } from 'react'
-import { motion } from 'framer-motion'
-import Link from 'next/link'
-import { Screen } from '../screen'
-import { Wrapper } from '../home-wrapper'
-import { BubbleAnimationText } from '../bubble-text'
-import { microReboundPreset } from '@/src/constants'
+'use client';
+import { FC } from 'react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { Screen } from '../screen';
+import { Wrapper } from '../home-wrapper';
+import { BubbleAnimationText } from '../bubble-text';
+import { microReboundPreset } from '@/src/constants';
 
-import './index.css'
+import './index.css';
 
 export const Experiences: FC = () => {
   return (
@@ -122,5 +122,5 @@ export const Experiences: FC = () => {
         </div>
       </Wrapper>
     </Screen>
-  )
-}
+  );
+};

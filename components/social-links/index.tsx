@@ -1,45 +1,19 @@
-import type { FC } from 'react'
-import { motion } from 'framer-motion'
-import { GitHubIcon, TelegramIcon, TwitterIcon, MailIcon, AtomIcon } from '@/components/icons'
-import { microReboundPreset } from '@/src/constants'
-import Link from 'next/link'
+import type { FC } from 'react';
+import { motion } from 'framer-motion';
+import { microReboundPreset } from '@/src/constants';
+import { AllNavItems } from '@/src/constants/nav';
+import Link from 'next/link';
 
-const socials = [
-  {
-    icon: GitHubIcon,
-    name: 'Github',
-    link: 'https://github.com/jackeydou',
-  },
-  {
-    icon: TwitterIcon,
-    name: 'Twitter',
-    link: 'https://twitter.com/L3Lom0',
-  },
-  {
-    icon: MailIcon,
-    name: 'Email',
-    link: 'mailto:jackey.dou@gmail.com',
-  },
-  {
-    icon: TelegramIcon,
-    name: 'Telegram',
-    link: '',
-  },
-  {
-    icon: AtomIcon,
-    name: 'RSS',
-    link: '',
-  },
-]
+const socials = AllNavItems.filter((it) => it.type === 'top');
 
 export const SocialLinks: FC<{
-  initialDelay?: number
-  delay?: number
+  initialDelay?: number;
+  delay?: number;
 }> = ({ initialDelay = 0, delay = 0.1 }) => {
   return (
     <div>
       {socials.map((iter, idx) => {
-        const SocialSvg = iter.icon
+        const SocialSvg = iter.icon;
         return (
           <motion.div
             key={idx}
@@ -67,8 +41,8 @@ export const SocialLinks: FC<{
               <SocialSvg className="h-6 w-6 text-slate-300 transition hover:text-white" />
             </Link>
           </motion.div>
-        )
+        );
       })}
     </div>
-  )
-}
+  );
+};

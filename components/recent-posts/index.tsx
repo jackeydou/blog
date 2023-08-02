@@ -1,14 +1,14 @@
-'use client'
-import { FC } from 'react'
-import { Screen } from '../screen'
-import { Wrapper } from '../home-wrapper'
-import { BubbleAnimationText } from '../bubble-text'
-import { PostHeader } from '@/src/types/post'
-import { PostList } from './post-list'
-import Link from 'next/link'
+'use client';
+import { FC } from 'react';
+import { Screen } from '../screen';
+import { Wrapper } from '../home-wrapper';
+import { BubbleAnimationText } from '../bubble-text';
+import { PostHeader } from '@/src/types/post';
+import { PostList } from './post-list';
+import Link from 'next/link';
 
 export const RecentPosts: FC<{
-  posts: PostHeader[]
+  posts: PostHeader[];
 }> = ({ posts }) => {
   return (
     <Screen className="px-8">
@@ -21,5 +21,5 @@ export const RecentPosts: FC<{
         </PostList>
       </Wrapper>
     </Screen>
-  )
-}
+  );
+};

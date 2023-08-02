@@ -1,14 +1,14 @@
-'use client'
-import { motion } from 'framer-motion'
-import { MobileSideInfo } from '../side-info/mobile'
-import { Screen } from '../screen'
-import { Wrapper } from '../home-wrapper'
-import { BubbleAnimationText } from '../bubble-text'
-import { microReboundPreset } from '@/src/constants'
-import { DownArrowIcon } from '../icons'
+'use client';
+import { motion } from 'framer-motion';
+import { MobileSideInfo } from '../side-info/mobile';
+import { Screen } from '../screen';
+import { Wrapper } from '../home-wrapper';
+import { BubbleAnimationText } from '../bubble-text';
+import { microReboundPreset } from '@/src/constants';
+import { DownArrowIcon } from '../icons';
 
-const introText = 'Say Hi👋 from '
-const developerText = '<Developer at="Bytedance" />'
+const introText = 'Say Hi👋 from ';
+const developerText = '<Developer at="Bytedance" />';
 const intro = [
   {
     text: introText,
@@ -56,7 +56,7 @@ const intro = [
   {
     text: 'INTJ / Climber / Spartan / ...',
   },
-]
+];
 
 export function Intro() {
   return (
@@ -70,10 +70,10 @@ export function Intro() {
             animate={{ opacity: 1, y: 0 }}
           >
             {intro.map((it, idx) => {
-              const delay = 0.1
+              const delay = 0.1;
               const delayTime = intro.reduce((acc, cur, index) => {
-                return acc + (index < idx ? cur.text.length * delay : 0)
-              }, 0)
+                return acc + (index < idx ? cur.text.length * delay : 0);
+              }, 0);
               return (
                 <BubbleAnimationText
                   key={it.text + idx}
@@ -85,7 +85,7 @@ export function Intro() {
                 >
                   {it.children}
                 </BubbleAnimationText>
-              )
+              );
             })}
           </motion.div>
           <motion.p
@@ -121,5 +121,5 @@ export function Intro() {
         </motion.div>
       </Wrapper>
     </Screen>
-  )
+  );
 }

@@ -1,11 +1,11 @@
-'use client'
-import { useRef } from 'react'
-import { motion, sync, useCycle } from 'framer-motion'
-import { useDimensions } from './use-dimensions'
-import { MenuToggle } from '../menu/toggle'
-import { Navigation } from './nav'
-import './index.css'
-import { clsxm } from '@/src/utils'
+'use client';
+import { useRef } from 'react';
+import { motion, sync, useCycle } from 'framer-motion';
+import { useDimensions } from './use-dimensions';
+import { MenuToggle } from '../menu/toggle';
+import { Navigation } from './nav';
+import './index.css';
+import { clsxm } from '@/src/utils';
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -25,12 +25,12 @@ const sidebar = {
       damping: 40,
     },
   },
-}
+};
 
 export const MobileNav = ({ className }: { className?: string }) => {
-  const [isOpen, toggleOpen] = useCycle(false, true)
-  const containerRef = useRef(null)
-  const { height } = useDimensions(containerRef)
+  const [isOpen, toggleOpen] = useCycle(false, true);
+  const containerRef = useRef(null);
+  const { height } = useDimensions(containerRef);
 
   return (
     <motion.nav
@@ -44,5 +44,5 @@ export const MobileNav = ({ className }: { className?: string }) => {
       <Navigation className={isOpen ? 'block' : 'hidden'} />
       <MenuToggle toggle={() => toggleOpen()} />
     </motion.nav>
-  )
-}
+  );
+};

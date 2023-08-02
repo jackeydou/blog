@@ -1,5 +1,5 @@
-import * as React from 'react'
-import { motion } from 'framer-motion'
+import * as React from 'react';
+import { motion } from 'framer-motion';
 import {
   GitHubIcon,
   TwitterIcon,
@@ -8,9 +8,9 @@ import {
   PostsIcon,
   TagIcon,
   DashboardIcon,
-} from '@/components/icons'
-import { MenuItem } from '../menu/item'
-import { clsxm } from '@/src/utils'
+} from '@/components/icons';
+import { MenuItem } from '../menu/item';
+import { clsxm } from '@/src/utils';
 
 const variants = {
   open: {
@@ -19,7 +19,7 @@ const variants = {
   closed: {
     transition: { staggerChildren: 0.05, staggerDirection: -1 },
   },
-}
+};
 
 const NavItems = [
   {
@@ -57,7 +57,7 @@ const NavItems = [
     name: 'RSS',
     link: '',
   },
-]
+];
 
 export const Navigation = ({ className }: { className?: string }) => (
   <motion.ul variants={variants} className={clsxm('', className)}>
@@ -65,6 +65,6 @@ export const Navigation = ({ className }: { className?: string }) => (
       <MenuItem icon={it.icon} link={it.link} name={it.name} key={it.link} />
     ))}
   </motion.ul>
-)
+);
 
-const itemIds = [0, 1, 2, 3, 4]
+const itemIds = [0, 1, 2, 3, 4];

@@ -1,17 +1,17 @@
-'use client'
-import { FC, PropsWithChildren } from 'react'
-import { motion } from 'framer-motion'
-import { microReboundPreset } from '@/src/constants'
-import { clsxm } from '@/src/utils'
+'use client';
+import { FC, PropsWithChildren } from 'react';
+import { motion } from 'framer-motion';
+import { microReboundPreset } from '@/src/constants';
+import { clsxm } from '@/src/utils';
 
 export const BubbleAnimationText: FC<
   PropsWithChildren<{
-    text: string
-    delay?: number
-    initialDelay?: number
-    visible?: boolean
-    spanClassName?: string
-    className?: string
+    text: string;
+    delay?: number;
+    initialDelay?: number;
+    visible?: boolean;
+    spanClassName?: string;
+    className?: string;
   }>
 > = ({
   text,
@@ -23,7 +23,7 @@ export const BubbleAnimationText: FC<
   className,
 }) => {
   if (!visible) {
-    return <div />
+    return <div />;
   }
   return (
     <div className={clsxm('flex items-center', className)}>
@@ -33,7 +33,7 @@ export const BubbleAnimationText: FC<
             key={idx}
             className={clsxm(
               'inline-block whitespace-pre text-white text-2xl leading-loose',
-              spanClassName
+              spanClassName,
             )}
             initial={{ transform: 'translateY(10px)', opacity: 0.001 }}
             animate={{
@@ -48,9 +48,9 @@ export const BubbleAnimationText: FC<
           >
             {it}
           </motion.span>
-        )
+        );
       })}
       <div>{children}</div>
     </div>
-  )
-}
+  );
+};

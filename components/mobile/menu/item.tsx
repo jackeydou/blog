@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { motion } from 'framer-motion'
-import Link from 'next/link'
+import * as React from 'react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const variants = {
   open: {
@@ -17,12 +17,12 @@ const variants = {
       y: { stiffness: 1000 },
     },
   },
-}
+};
 
 export const MenuItem: React.FC<{
-  icon: (props?: React.SVGAttributes<SVGElement>) => React.ReactNode
-  name: string
-  link: string
+  icon: (props?: React.SVGAttributes<SVGElement>) => React.ReactNode;
+  name: string;
+  link: string;
 }> = (props) => {
   return (
     <motion.li
@@ -36,5 +36,5 @@ export const MenuItem: React.FC<{
         <span className="ml-2">{props.name}</span>
       </Link>
     </motion.li>
-  )
-}
+  );
+};

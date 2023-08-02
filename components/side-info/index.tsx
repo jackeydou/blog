@@ -1,28 +1,28 @@
-'use client'
-import { useState, useEffect, useCallback } from 'react'
-import { motion } from 'framer-motion'
-import { atom, useAtom } from 'jotai'
-import Tilt from 'react-parallax-tilt'
-import { SocialLinks } from '../social-links'
-import { clsxm } from '@/src/utils'
+'use client';
+import { useState, useEffect, useCallback } from 'react';
+import { motion } from 'framer-motion';
+import { atom, useAtom } from 'jotai';
+import Tilt from 'react-parallax-tilt';
+import { SocialLinks } from '../social-links';
+import { clsxm } from '@/src/utils';
 
 export function SideInfo({ className }: { className?: string }) {
   // const [focusingMember, setFocusingMember] = useAtom(focusingMemberSlugAtom)
-  const onMouseEnter = useCallback(() => {}, [])
-  const onMouseLeave = useCallback(() => {}, [])
-  const [tiltEnabled, setTiltEnabled] = useState(true)
+  const onMouseEnter = useCallback(() => {}, []);
+  const onMouseLeave = useCallback(() => {}, []);
+  const [tiltEnabled, setTiltEnabled] = useState(true);
   // only enable tilt on non-mobile devices
   useEffect(() => {
     if (/Mobi|Android|iPhone|iPad/i.test(window.navigator.userAgent)) {
-      setTiltEnabled(false)
+      setTiltEnabled(false);
     }
-  }, [])
+  }, []);
 
   return (
     <div
       className={clsxm(
         'fixed w-[360px] h-full ml-3 mt-3 justify-center items-center left-0 hidden',
-        className
+        className,
       )}
     >
       <Tilt
@@ -83,5 +83,5 @@ export function SideInfo({ className }: { className?: string }) {
         </motion.div>
       </Tilt>
     </div>
-  )
+  );
 }
