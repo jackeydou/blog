@@ -1,8 +1,9 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { TopNav } from '@/components/top-nav';
-import { Tag } from '@/components/tag';
-import { getTags, kebabCase } from '@/src/utils/mdx';
+import { getBooks } from '@/src/supabase';
+import { MobileNav } from '@/components/mobile/nav';
+
 
 export const metadata: Metadata = {
   title: "Dou's Books",
@@ -32,12 +33,12 @@ export const metadata: Metadata = {
 
 export default async function Books({ params }: { params: { slug: string[] } }) {
   const { slug } = params;
-  const tags = await getTags();
-  const sortedKeys = Object.keys(tags).sort((a, b) => tags[b] - tags[a]);
+  const books = await getBooks();
   return (
     <main className="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-4xl xl:px-0 flex min-h-screen flex-col items-center">
-      <TopNav />
+      <TopNav className="lg:flex" />
       <div className="text-5xl dark:text-white mt-10">🚧 Work in Progress</div>
+      <MobileNav className="lg:hidden" />
     </main>
   );
 }

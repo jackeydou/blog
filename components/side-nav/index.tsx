@@ -8,39 +8,9 @@ import { HomeIcon, PostsIcon, TagIcon, DashboardIcon } from '@/components/icons'
 import { SocialIcon } from '@/components/social-icon';
 import { clsxm } from '@/src/utils';
 import { NavItemType } from '@/src/types/nav';
+import { AllNavItems } from '@/src/constants/nav';
 
-const NavItems: NavItemType[] = [
-  {
-    icon: HomeIcon,
-    name: 'Home',
-    link: '/',
-    type: 'side',
-  },
-  {
-    icon: PostsIcon,
-    name: 'Posts',
-    link: '/post',
-    type: 'side',
-  },
-  {
-    icon: TagIcon,
-    name: 'Tags',
-    link: '/tags',
-    type: 'side',
-  },
-  {
-    icon: DashboardIcon,
-    name: 'Projects',
-    link: '/projects',
-    type: 'side',
-  },
-  {
-    icon: FiBookOpen,
-    name: 'Books',
-    link: '/book',
-    type: 'side',
-  },
-];
+const NavItems: NavItemType[] = AllNavItems.filter(it => it.type === 'side');
 
 export const SideNav: FC<{ className?: string }> = ({ className }) => {
   return (
