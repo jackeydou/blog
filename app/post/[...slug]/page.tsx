@@ -30,7 +30,7 @@ export async function generateMetadata(
     description: '',
     viewport: 'width=device-width, initial-scale=1',
     creator: 'jackey.dou',
-    icons: '',
+    icons: '/static/images/logo.svg',
     openGraph: {
       type: 'website',
       url: 'https://jackey.libertylab.icu',

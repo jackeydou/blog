@@ -39,7 +39,7 @@ export const AllNavItems: NavItemType[] = [
   {
     icon: FiBookOpen,
     name: 'Books',
-    link: '/book',
+    link: '/books',
     type: 'side',
   },
   {
