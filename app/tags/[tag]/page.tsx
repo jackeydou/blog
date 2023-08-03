@@ -1,8 +1,10 @@
 import Link from 'next/link';
+import { Metadata } from 'next';
 import { TopNav } from '@/components/top-nav';
 import { MobileNav } from '@/components/mobile/nav';
-
-import { Metadata } from 'next';
+import { getFilesFrontMatter, kebabCase } from '@/src/utils/mdx';
+import { PostList } from '@/components/recent-posts/post-list';
+import { BubbleAnimationText } from '@/components/bubble-text';
 
 export const metadata: Metadata = {
   title: "Dou's Website",
@@ -30,13 +32,25 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function Tags({ params }: { params: { slug: string[] } }) {
-  const { slug } = params;
+export default async function Tags({ params }: { params: { tag: string; } }) {
+  const { tag } = params;
+  const frontmatters = (await getFilesFrontMatter()).filter(it => {
+    return Array.isArray(it.tags) ? it.tags.map(it => kebabCase(it)).includes(tag) : it.tags === tag;
+  });
   return (
-    <main className="pt-20 lg:pt-0 mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-4xl xl:px-0 flex min-h-screen flex-col items-center">
+    <main className="mx-auto max-w-3xl xl:max-w-4xl flex min-h-screen flex-col px-4 lg:px-0 pt-20 lg:pt-0">
       <TopNav className="lg:flex" />
+      <section className="mx-auto max-w-3xl xl:max-w-4xl pt-4 pb-10">
+        <BubbleAnimationText text={`About - ${tag}`} />
+        <Link
+          href="/"
+          className="dark:text-slate-400 opacity-0 hover:underline underline-offset-4 animate-opacity my-4"
+        >
+          {'>'} cd ..
+        </Link>
+        <PostList posts={frontmatters} delay={0} />
+      </section>
       <MobileNav className="lg:hidden" />
-      <div className="text-5xl dark:text-white mt-10">🚧 Work in Progress</div>
     </main>
   );
 }

@@ -38,8 +38,8 @@ export default async function Post() {
   return (
     <main className="mx-auto max-w-3xl xl:max-w-4xl flex min-h-screen flex-col px-4 lg:px-0 pt-20 lg:pt-0">
       <TopNav className="lg:flex" />
-      <BubbleAnimationText className="lg:hidden" text="Posts" />
       <section className="mx-auto max-w-3xl xl:max-w-4xl pt-4 pb-10">
+        <BubbleAnimationText className="lg:hidden" text="Posts" />
         <Link
           href="/"
           className="dark:text-slate-400 opacity-0 hover:underline underline-offset-4 animate-opacity my-4"
