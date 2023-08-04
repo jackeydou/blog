@@ -1,8 +1,10 @@
-import { createClient } from '@supabase/supabase-js'
+// import { createClient } from '@supabase/supabase-js'
+import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
+import { cookies } from 'next/headers';
 
 // @ts-ignore
-const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY)
+const supabase = createServerComponentClient({ cookies });
 
 export async function getBooks() {
-  return await supabase.from('Books').select()
+  return await supabase.from('Books').select();
 }

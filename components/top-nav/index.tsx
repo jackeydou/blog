@@ -27,6 +27,12 @@ const NavItems: (NavItemType & { text?: string })[] = [
     link: '/tags',
     icon: () => <></>,
   },
+  {
+    text: 'Books',
+    name: 'Books',
+    link: '/books',
+    icon: () => <></>,
+  },
   ...AllNavItems.filter((it) => it.type === 'top'),
 ];
 

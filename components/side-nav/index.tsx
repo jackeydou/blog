@@ -10,7 +10,7 @@ import { clsxm } from '@/src/utils';
 import { NavItemType } from '@/src/types/nav';
 import { AllNavItems } from '@/src/constants/nav';
 
-const NavItems: NavItemType[] = AllNavItems.filter(it => it.type === 'side');
+const NavItems: NavItemType[] = AllNavItems.filter((it) => it.type === 'side');
 
 export const SideNav: FC<{ className?: string }> = ({ className }) => {
   return (

@@ -3,7 +3,9 @@ import Link from 'next/link';
 import { TopNav } from '@/components/top-nav';
 import { getBooks } from '@/src/supabase';
 import { MobileNav } from '@/components/mobile/nav';
-
+import { Books as BooksData } from '@/data/books';
+import { Book } from '@/components/book';
+import { BubbleAnimationText } from '@/components/bubble-text';
 
 export const metadata: Metadata = {
   title: "Dou's Books",
@@ -33,11 +35,15 @@ export const metadata: Metadata = {
 
 export default async function Books({ params }: { params: { slug: string[] } }) {
   const { slug } = params;
-  const books = await getBooks();
   return (
-    <main className="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-4xl xl:px-0 flex min-h-screen flex-col items-center">
+    <main className="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-4xl xl:px-0 flex min-h-screen flex-col">
       <TopNav className="lg:flex" />
-      <div className="text-5xl dark:text-white mt-10">🚧 Work in Progress</div>
+      <BubbleAnimationText text="Books" />
+      <div className="animate-fadein-b">
+        {BooksData.map((book) => (
+          <Book key={book.id} book={book} />
+        ))}
+      </div>
       <MobileNav className="lg:hidden" />
     </main>
   );

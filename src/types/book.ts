@@ -1,6 +1,5 @@
-export interface Book {
+export interface IBook {
   id: number;
-  create_at: Date;
   book_name: string;
   description: string;
   cover: string;

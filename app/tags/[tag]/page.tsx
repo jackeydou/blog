@@ -32,10 +32,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function Tags({ params }: { params: { tag: string; } }) {
+export default async function Tags({ params }: { params: { tag: string } }) {
   const { tag } = params;
-  const frontmatters = (await getFilesFrontMatter()).filter(it => {
-    return Array.isArray(it.tags) ? it.tags.map(it => kebabCase(it)).includes(tag) : it.tags === tag;
+  const frontmatters = (await getFilesFrontMatter()).filter((it) => {
+    return Array.isArray(it.tags)
+      ? it.tags.map((it) => kebabCase(it)).includes(tag)
+      : it.tags === tag;
   });
   return (
     <main className="mx-auto max-w-3xl xl:max-w-4xl flex min-h-screen flex-col px-4 lg:px-0 pt-20 lg:pt-0">
