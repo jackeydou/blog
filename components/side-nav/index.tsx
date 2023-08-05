@@ -1,6 +1,5 @@
 'use client';
 import { FC } from 'react';
-import { FiBookOpen } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 import { microReboundPreset } from '@/src/constants';
 import { HomeIcon, PostsIcon, TagIcon, DashboardIcon } from '@/components/icons';
