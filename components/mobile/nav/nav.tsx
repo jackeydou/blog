@@ -1,16 +1,10 @@
 import * as React from 'react';
 import { motion } from 'framer-motion';
-import {
-  GitHubIcon,
-  TwitterIcon,
-  MailIcon,
-  AtomIcon,
-  PostsIcon,
-  TagIcon,
-  DashboardIcon,
-} from '@/components/icons';
+import { FiBookOpen } from 'react-icons/fi';
+import { PostsIcon, TagIcon, DashboardIcon } from '@/components/icons';
 import { MenuItem } from '../menu/item';
 import { clsxm } from '@/src/utils';
+import { AllNavItems } from '@/src/constants/nav';
 
 const variants = {
   open: {
@@ -38,25 +32,12 @@ const NavItems = [
     link: '/tags',
   },
   {
-    icon: GitHubIcon,
-    name: 'Github',
-    link: 'https://github.com/jackeydou',
+    text: 'Books',
+    name: 'Books',
+    link: '/books',
+    icon: FiBookOpen,
   },
-  {
-    icon: TwitterIcon,
-    name: 'Twitter',
-    link: 'https://twitter.com/L3Lom0',
-  },
-  {
-    icon: MailIcon,
-    name: 'Email',
-    link: 'mailto:jackey.dou@gmail.com',
-  },
-  {
-    icon: AtomIcon,
-    name: 'RSS',
-    link: '',
-  },
+  ...AllNavItems.filter((it) => it.type === 'top'),
 ];
 
 export const Navigation = ({ className }: { className?: string }) => (

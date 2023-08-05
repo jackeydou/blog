@@ -1,6 +1,6 @@
 'use client';
-import { useRef } from 'react';
-import { motion, sync, useCycle } from 'framer-motion';
+import { useRef, useEffect, useState } from 'react';
+import { motion, useCycle } from 'framer-motion';
 import { useDimensions } from './use-dimensions';
 import { MenuToggle } from '../menu/toggle';
 import { Navigation } from './nav';
@@ -29,8 +29,20 @@ const sidebar = {
 
 export const MobileNav = ({ className }: { className?: string }) => {
   const [isOpen, toggleOpen] = useCycle(false, true);
+  const [hideNav, toggleHideNav] = useState(false);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
+  const timer = useRef<any>(null);
+  useEffect(() => {
+    if (isOpen) {
+      toggleHideNav(true);
+    } else {
+      timer.current = setTimeout(() => {
+        toggleHideNav(isOpen);
+      }, 500);
+    }
+    return () => clearTimeout(timer.current);
+  }, [isOpen]);
 
   return (
     <motion.nav
@@ -41,7 +53,7 @@ export const MobileNav = ({ className }: { className?: string }) => {
       ref={containerRef}
     >
       <motion.div className="mobile-nav-background bg-dark-bg" variants={sidebar} />
-      <Navigation className={isOpen ? 'block' : 'hidden'} />
+      <Navigation className={hideNav ? 'block' : 'hidden'} />
       <MenuToggle toggle={() => toggleOpen()} />
     </motion.nav>
   );

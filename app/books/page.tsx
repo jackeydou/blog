@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 export default async function Books({ params }: { params: { slug: string[] } }) {
   const { data: books } = await supabase.from('Books').select('*');
   return (
-    <main className="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-4xl xl:px-0 flex min-h-screen flex-col">
+    <main className="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-4xl xl:px-0 flex min-h-screen flex-col pt-20 lg:pt-0">
       <TopNav className="lg:flex" />
       <BubbleAnimationText text="Books" />
       <div className="animate-fadein-b">
