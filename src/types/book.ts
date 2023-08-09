@@ -6,4 +6,5 @@ export interface IBook {
   link: string;
   progress: number;
   score: number;
+  create_at: string;
 }
