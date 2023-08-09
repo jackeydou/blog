@@ -15,7 +15,7 @@ export const Book: FC<{ book: IBook }> = ({ book }) => {
     />
   ));
   return (
-    <div className="flex justify-between py-4">
+    <div className="flex py-4">
       <img src={book.cover} className="w-[100px] flex-shrink-0 h-[143px]" />
       <div className="px-3">
         <Link href={book.link}>
