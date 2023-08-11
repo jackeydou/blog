@@ -1,5 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
+import { FiChevronDown } from 'react-icons/fi';
 import { MobileSideInfo } from '../side-info/mobile';
 import { Screen } from '../screen';
 import { Wrapper } from '../home-wrapper';
@@ -14,7 +15,7 @@ const intro = [
     text: introText,
     children: (
       <motion.span
-        className="text-custom-green text-2xl"
+        className="text-green-600 dark:text-green-400 text-2xl"
         initial={{
           opacity: 0.001,
           transform: 'translateY(10px)',
@@ -89,7 +90,7 @@ export function Intro() {
             })}
           </motion.div>
           <motion.p
-            className="text-slate-400 text-sm mt-10 text-center lg:text-left"
+            className="text-slate-500 dark:text-slate-400 text-sm mt-10 text-center lg:text-left"
             initial={{ transform: 'translateY(10px)', opacity: 0.001 }}
             animate={{
               transform: 'translateY(0px)',
@@ -114,9 +115,9 @@ export function Intro() {
             },
           }}
         >
-          <span className="text-sm text-slate-500">查看更多</span>
+          <span className="text-sm text-slate-400 dark:text-slate-500">查看更多</span>
           <span className="mt-8 animate-bounce">
-            <DownArrowIcon />
+            <FiChevronDown className="h-6 w-6 text-slate-950 dark:text-slate-50" />
           </span>
         </motion.div>
       </Wrapper>

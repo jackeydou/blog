@@ -26,7 +26,9 @@ export function SideInfo({ className }: { className?: string }) {
       )}
     >
       <Tilt
-        className={clsxm(['not-prose group flex flex-col justify-between rounded-2xl'])}
+        className={clsxm([
+          'not-prose group flex flex-col justify-between rounded-2xl overflow-hidden',
+        ])}
         tiltEnable={tiltEnabled}
         perspective={600}
         scale={1.01}
@@ -41,7 +43,7 @@ export function SideInfo({ className }: { className?: string }) {
         onLeave={onMouseLeave}
       >
         <motion.div
-          className="px-8 py-20 flex rounded-lg border border-slate-50 flex-col justify-center items-center"
+          className="px-8 py-20 flex rounded-2xl border border-slate-800 dark:border-slate-50 flex-col justify-center items-center"
           initial={{
             opacity: 0.001,
             transform: 'translateX(-30px)',
@@ -60,11 +62,11 @@ export function SideInfo({ className }: { className?: string }) {
             src="/images/avatar.jpg"
             alt="avatar"
           />
-          <p className="text-lg mb-4 dark:text-white text-gray-500">Jackey @Bytedance</p>
-          <p className="text-lg mb-4 dark:text-white text-gray-500">Base in Shanghai, China</p>
+          <p className="text-lg mb-4 dark:text-white text-slate-900">Jackey @Bytedance</p>
+          <p className="text-lg mb-4 dark:text-white text-slate-900">Base in Shanghai, China</p>
           <SocialLinks initialDelay={0.7} />
           <motion.p
-            className="text-sm text-slate-500 mt-3"
+            className="text-sm text-slate-500 dark:text-slate-400 mt-3"
             initial={{
               opacity: 0.001,
               transform: 'translateY(20px)',
