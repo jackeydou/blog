@@ -34,8 +34,8 @@ export const PostList: FC<
         return (
           <div key={post.slug} className="py-3">
             <Link href={`/post/${post.slug}`}>
-              <span className="text-lg text-slate-300">{post.title}</span>
-              <span className="text-sm text-slate-500 ml-4">
+              <span className="text-lg text-slate-600 dark:text-slate-300">{post.title}</span>
+              <span className="text-sm text-slate-400 dark:text-slate-500 ml-4">
                 {dayjs(post.date).format('YYYY-MM-DD')}
               </span>
             </Link>

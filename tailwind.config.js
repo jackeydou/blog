@@ -34,7 +34,8 @@ module.exports = {
         primary: colors.teal,
         gray: colors.neutral,
         'custom-green': "#29e88c",
-        'dark-bg': "rgb(32, 32, 32)"
+        'dark-bg': "rgb(32, 32, 32)",
+        'light-bg': "rgb(255, 255, 255)"
       },
       typography: (theme) => ({
         // DEFAULT: {

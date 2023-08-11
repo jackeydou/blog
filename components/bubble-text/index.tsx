@@ -32,7 +32,7 @@ export const BubbleAnimationText: FC<
           <motion.span
             key={idx}
             className={clsxm(
-              'inline-block whitespace-pre text-white text-2xl leading-loose',
+              'inline-block whitespace-pre text-slate-900 dark:text-white text-2xl leading-loose',
               spanClassName,
             )}
             initial={{ transform: 'translateY(10px)', opacity: 0.001 }}

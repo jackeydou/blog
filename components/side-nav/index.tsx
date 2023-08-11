@@ -2,8 +2,7 @@
 import { FC } from 'react';
 import { motion } from 'framer-motion';
 import { microReboundPreset } from '@/src/constants';
-import { HomeIcon, PostsIcon, TagIcon, DashboardIcon } from '@/components/icons';
-
+import { ThemeButton } from './theme-btn';
 import { SocialIcon } from '@/components/social-icon';
 import { clsxm } from '@/src/utils';
 import { NavItemType } from '@/src/types/nav';
@@ -32,7 +31,7 @@ export const SideNav: FC<{ className?: string }> = ({ className }) => {
         },
       }}
     >
-      <div className="border border-slate-100 w-9 flex flex-col items-center rounded-full py-3">
+      <div className="border border-slate-800 dark:border-slate-100 w-9 flex flex-col items-center rounded-full py-3">
         {NavItems.map((it) => {
           return (
             <SocialIcon
@@ -44,6 +43,7 @@ export const SideNav: FC<{ className?: string }> = ({ className }) => {
             />
           );
         })}
+        <ThemeButton className="my-2" />
       </div>
     </motion.div>
   );

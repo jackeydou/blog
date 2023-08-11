@@ -16,7 +16,7 @@ export const SocialIcon: FC<{
       <Tooltip.Root open={open} onOpenChange={setOpen}>
         <Tooltip.Trigger asChild>
           <Link href={props.link} className="my-2" key={props.name}>
-            <props.icon className="h-5 w-5 text-white transition" />
+            <props.icon className="h-5 w-5 text-slate-900 dark:text-white transition" />
           </Link>
         </Tooltip.Trigger>
         <AnimatePresence>

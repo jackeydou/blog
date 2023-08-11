@@ -38,7 +38,7 @@ export const SocialLinks: FC<{
               rel="noopener noreferrer"
               href={iter.link}
             >
-              <SocialSvg className="h-6 w-6 text-slate-300 transition hover:text-white" />
+              <SocialSvg className="h-6 w-6 text-slate-600 dark:text-slate-300 transition hover:text-white" />
             </Link>
           </motion.div>
         );

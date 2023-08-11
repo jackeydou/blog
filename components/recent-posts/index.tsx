@@ -15,7 +15,7 @@ export const RecentPosts: FC<{
       <Wrapper>
         <BubbleAnimationText text="Posts" />
         <PostList posts={posts} className="mt-6">
-          <div className="text-sm text-slate-500 mt-4 cursor-pointer">
+          <div className="text-sm text-slate-400 dark:text-slate-500 mt-4 cursor-pointer">
             <Link href="/post">查看更多</Link>
           </div>
         </PostList>
