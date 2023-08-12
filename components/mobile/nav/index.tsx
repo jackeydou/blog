@@ -52,7 +52,10 @@ export const MobileNav = ({ className }: { className?: string }) => {
       custom={height}
       ref={containerRef}
     >
-      <motion.div className="mobile-nav-background bg-dark-bg" variants={sidebar} />
+      <motion.div
+        className="mobile-nav-background bg-slate-400 dark:bg-slate-800"
+        variants={sidebar}
+      />
       <Navigation className={hideNav ? 'block' : 'hidden'} />
       <MenuToggle toggle={() => toggleOpen()} />
     </motion.nav>
