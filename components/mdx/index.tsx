@@ -14,8 +14,8 @@ export async function MDX({ sourcePath }: { sourcePath: string }) {
     options: { parseFrontmatter: true },
   });
   return (
-    <article className="w-full flex flex-col pt-10">
-      <h1 className="text-4xl text-gray-900 dark:text-gray-100">{frontmatter.title}</h1>
+    <article className="flex flex-col pt-20 lg:pt-10">
+      <h1 className="text-xl lg:text-4xl text-gray-900 dark:text-gray-100">{frontmatter.title}</h1>
       <p className="text-gray-500 dark:text-gray-400 my-3">
         {dayjs(frontmatter.date).format('dddd, MMM DD, YYYY')}
       </p>
