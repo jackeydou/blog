@@ -41,7 +41,7 @@ export default async function Books({ params }: { params: { slug: string[] } }) 
       <TopNav className="lg:flex" />
       <BubbleAnimationText text="Books" />
       <div className="animate-fadein-b">
-        {(books as IBook[]).map((book) => (
+        {((books as IBook[]) ?? []).map((book) => (
           <Book key={book.id} book={book} />
         ))}
       </div>

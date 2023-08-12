@@ -39,7 +39,7 @@ export default async function Tags({ params }: { params: { slug: string[] } }) {
     <main className="pt-20 lg:pt-0 mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-4xl xl:px-0 flex min-h-screen flex-col items-center">
       <TopNav className="lg:flex" />
       <MobileNav className="lg:hidden" />
-      <div className="animate-fadein-b flex flex-col items-start justify-start divide-y divide-gray-200 dark:divide-gray-700 md:mt-24 md:flex-row md:items-center md:justify-center md:space-x-6 md:divide-y-0">
+      <div className="animate-fadein-b flex flex-col items-start justify-start divide-y divide-gray-200 dark:divide-gray-700 md:mt-24 md:flex-row md:items-center md:justify-center md:space-x-6 md:divide-y-0 z-10">
         <div className="space-x-2 pt-6 pb-8 md:space-y-5">
           <h1 className="dark:text-white text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:border-r-2 md:px-6 md:text-6xl md:leading-14">
             Tags

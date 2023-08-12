@@ -39,7 +39,7 @@ const NavItems: (NavItemType & { text?: string })[] = [
 export const TopNav: FC<{ className?: string }> = ({ className }) => {
   return (
     <section className={clsxm('w-full h-[50px] justify-between items-center hidden', className)}>
-      <div className="fixed h-[50px] w-full max-w-3xl xl:max-w-4xl flex justify-between items-center bg-light-bg dark:bg-dark-bg z-50">
+      <div className="fixed h-[50px] w-full max-w-3xl xl:max-w-4xl flex justify-between items-center z-50">
         <Link href="/">
           <div className="flex items-center justify-between">
             <div className="mr-3">
@@ -62,7 +62,6 @@ export const TopNav: FC<{ className?: string }> = ({ className }) => {
           <ThemeButton className="mx-2" />
         </div>
       </div>
-      <div className="w-full h-[50px]"></div>
     </section>
   );
 };

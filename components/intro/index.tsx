@@ -6,7 +6,7 @@ import { Screen } from '../screen';
 import { Wrapper } from '../home-wrapper';
 import { BubbleAnimationText } from '../bubble-text';
 import { microReboundPreset } from '@/src/constants';
-import { DownArrowIcon } from '../icons';
+import { ThemeButton } from '../side-nav/theme-btn';
 
 const introText = 'Say Hi👋 from ';
 const developerText = '<Developer at="Bytedance" />';
@@ -120,6 +120,9 @@ export function Intro() {
             <FiChevronDown className="h-6 w-6 text-slate-950 dark:text-slate-50" />
           </span>
         </motion.div>
+        <div className="w-[50px] h-[50px] absolute top-4 right-4 flex justify-center items-center lg:hidden">
+          <ThemeButton />
+        </div>
       </Wrapper>
     </Screen>
   );

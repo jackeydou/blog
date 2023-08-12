@@ -2,18 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.dark {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 32, 32, 32;
-  --background-end-rgb: 32, 32, 32;
-}
-
-.light {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 255, 255, 255;
-  --background-end-rgb: 255, 255, 255;
-}
-
 body {
-  background: rgb(var(--background-start-rgb));
+  background: rgb(32, 32, 32);
 }

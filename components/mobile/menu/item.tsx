@@ -26,7 +26,7 @@ export const MenuItem: React.FC<{
 }> = (props) => {
   return (
     <motion.li
-      className="dark:text-white"
+      className="dark:text-white text-slate-50"
       variants={variants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
