@@ -1,7 +1,7 @@
 ---
 title: vercel配置namecheap的域名
 date: '2022-12-16'
-tags: ['web-development']
+tags: ['Web Development']
 summary: 研究了一下vercel如何配置NameCheap的域名
 ---
 
