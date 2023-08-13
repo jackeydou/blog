@@ -32,6 +32,8 @@ export const metadata: Metadata = {
   },
 };
 
+export const revalidate = 86400;
+
 export default async function Tags({ params }: { params: { tag: string } }) {
   const { tag } = params;
   const frontmatters = (await getFilesFrontMatter()).filter((it) => {

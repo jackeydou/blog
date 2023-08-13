@@ -31,6 +31,8 @@ export const metadata: Metadata = {
   },
 };
 
+export const revalidate = 604800;
+
 export default async function Tags({ params }: { params: { slug: string[] } }) {
   const { slug } = params;
   const tags = await getTags();
