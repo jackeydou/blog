@@ -38,7 +38,7 @@ export default async function Post() {
   const allPostFrontMatter = await getFilesFrontMatter();
 
   return (
-    <main className="flex min-h-screen w-full max-w-screen-xl flex-col px-6 py-2 pt-20 sm:px-8 md:px-16 lg:pt-0">
+    <main className="mx-auto flex min-h-screen w-full max-w-screen-xl flex-col px-6 py-2 pb-10 pt-20 sm:px-8 md:px-16 lg:pt-0">
       <TopNav className="lg:flex" />
       <section className="mx-auto max-w-3xl pb-10 pt-4 xl:max-w-4xl">
         <BubbleAnimationText className="lg:hidden" text="Posts" />

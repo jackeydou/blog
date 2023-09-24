@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 
 export default async function Projects({ params }: { params: { slug: string[] } }) {
   return (
-    <main className="flex min-h-screen w-full max-w-screen-xl flex-col items-center px-6 py-2 pb-10 pt-20 sm:px-8 md:px-16 lg:pt-0">
+    <main className="mx-auto flex min-h-screen w-full max-w-screen-xl flex-col items-center px-6 py-2 pb-10 pt-20 sm:px-8 md:px-16 lg:pt-0">
       <TopNav className="lg:flex" />
       <div className="mt-10 text-5xl dark:text-white">🚧 Work in Progress</div>
       <MobileNav className="lg:hidden" />

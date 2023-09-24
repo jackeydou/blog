@@ -51,9 +51,9 @@ export default async function Post({ params }: { params: { slug: string[] } }) {
   const { slug } = params;
   const mdPath = getMarkdownFilePath(slug);
   return (
-    <main className="flex min-h-screen w-full max-w-screen-xl flex-col px-6 py-2 pb-10 pt-20 sm:px-8 md:px-16 lg:pt-0">
+    <main className="mx-auto flex min-h-screen w-full max-w-screen-xl flex-col  px-6 py-2 pb-10 pt-20 sm:px-8 md:px-16 lg:pt-0">
       <TopNav className="lg:flex" />
-      <div className="z-10 mx-auto max-w-3xl animate-[fadein-b_1s_ease-in-out] xl:max-w-4xl">
+      <div className="z-10 mx-auto w-full max-w-3xl animate-[fadein-b_1s_ease-in-out] xl:max-w-4xl">
         <MDX sourcePath={mdPath} />
       </div>
       <MobileNav className="lg:hidden" />

@@ -38,7 +38,7 @@ export default async function Tags({ params }: { params: { slug: string[] } }) {
   const tags = await getTags();
   const sortedKeys = Object.keys(tags).sort((a, b) => tags[b] - tags[a]);
   return (
-    <main className="flex min-h-screen w-full max-w-screen-xl flex-col px-6 py-2 pb-10 pt-20 sm:px-8 md:px-16 lg:pt-0">
+    <main className="mx-auto flex min-h-screen w-full max-w-screen-xl flex-col px-6 py-2 pb-10 pt-20 sm:px-8 md:px-16 lg:pt-0">
       <TopNav className="lg:flex" />
       <MobileNav className="lg:hidden" />
       <div className="z-10 flex animate-fadein-b flex-col items-start justify-start divide-y divide-gray-200 dark:divide-gray-700 md:mt-24 md:flex-row md:items-center md:justify-center md:space-x-6 md:divide-y-0">

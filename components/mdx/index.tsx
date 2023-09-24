@@ -21,7 +21,7 @@ export async function MDX({ sourcePath }: { sourcePath: string }) {
           {frontmatter.tags.map((tag) => (
             <>
               <Link
-                href={`/tag/${tag}`}
+                href={`/tags/${tag}`}
                 key={tag}
                 className="hover:text-slate dark:hover:text-text-slate-900 mr-3 text-slate-700 hover:border-b-2 dark:text-slate-300"
               >
