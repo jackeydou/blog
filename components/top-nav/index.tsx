@@ -38,19 +38,20 @@ const NavItems: (NavItemType & { text?: string })[] = [
 
 export const TopNav: FC<{ className?: string }> = ({ className }) => {
   return (
-    <section className={clsxm('w-full h-[50px] justify-between items-center hidden', className)}>
-      <div className="fixed h-[50px] w-full max-w-3xl xl:max-w-4xl flex justify-between items-center z-50">
+    <nav className={clsxm('sticky inset-x-0 top-0 hidden h-[50px] w-full', className)}>
+      <div className="z-50 flex h-[50px] w-full max-w-screen-xl items-center justify-between">
         <Link href="/">
           <div className="flex items-center justify-between">
             <div className="mr-3">
               <Logo />
             </div>
+            <span>DOU'S BLOG</span>
           </div>
         </Link>
         <div className="flex items-center">
           {NavItems.map((it) => {
             return (
-              <div className="mx-2 text-slate-700 dark:text-slate-300 inline-block" key={it.name}>
+              <div className="mx-2 inline-block text-slate-700 dark:text-slate-300" key={it.name}>
                 {it.text ? (
                   <Link href={it.link}>{it.text}</Link>
                 ) : (
@@ -62,6 +63,6 @@ export const TopNav: FC<{ className?: string }> = ({ className }) => {
           <ThemeButton className="mx-2" />
         </div>
       </div>
-    </section>
+    </nav>
   );
 };

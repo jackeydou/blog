@@ -40,7 +40,7 @@ export async function getFilesFrontMatter(limit?: number): Promise<PostHeader[]>
         allFrontMatter.push({
           ...frontmatter,
           slug: formatSlug(fileName),
-          date: new Date(frontmatter.date).toISOString(),
+          date: new Date(frontmatter.date ?? Date.now()).toISOString(),
         } as PostHeader);
       }
     }

@@ -42,13 +42,13 @@ export default async function Tags({ params }: { params: { tag: string } }) {
       : it.tags === tag;
   });
   return (
-    <main className="mx-auto max-w-3xl xl:max-w-4xl flex min-h-screen flex-col px-4 lg:px-0 pt-20 lg:pt-0">
+    <main className="flex min-h-screen w-full max-w-screen-xl flex-col px-6 py-2 pb-10 pt-20 sm:px-8 md:px-16 lg:pt-0">
       <TopNav className="lg:flex" />
-      <section className="mx-auto max-w-3xl xl:max-w-4xl pt-4 pb-10">
+      <section className="mx-auto max-w-3xl pb-10 pt-4 xl:max-w-4xl">
         <BubbleAnimationText text={`About - ${tag}`} />
         <Link
           href="/"
-          className="dark:text-slate-400 opacity-0 hover:underline underline-offset-4 animate-opacity my-4"
+          className="my-4 animate-opacity underline-offset-4 opacity-0 hover:underline dark:text-slate-400"
         >
           {'>'} cd ..
         </Link>
