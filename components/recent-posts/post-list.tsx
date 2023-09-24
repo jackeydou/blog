@@ -32,10 +32,15 @@ export const PostList: FC<
     >
       {posts.map((post) => {
         return (
-          <div key={post.slug} className="py-3">
+          <div key={post.slug} className="relative py-3">
+            {post.pinned && (
+              <span className="mr-2 inline-block rounded-md bg-gray-900 px-2 py-1 text-xs text-white dark:bg-gray-100 dark:text-black">
+                Pinned
+              </span>
+            )}
             <Link href={`/post/${post.slug}`}>
               <span className="text-lg text-slate-600 dark:text-slate-300">{post.title}</span>
-              <span className="text-sm text-slate-400 dark:text-slate-500 ml-4">
+              <span className="ml-4 text-sm text-slate-400 dark:text-slate-500">
                 {dayjs(post.date).format('YYYY-MM-DD')}
               </span>
             </Link>

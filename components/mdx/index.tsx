@@ -15,22 +15,26 @@ export async function MDX({ sourcePath }: { sourcePath: string }) {
   });
   return (
     <article className="flex flex-col pt-20 lg:pt-10">
-      <h1 className="text-xl lg:text-4xl text-gray-900 dark:text-gray-100">{frontmatter.title}</h1>
-      <p className="text-gray-500 dark:text-gray-400 my-3">
-        {dayjs(frontmatter.date).format('dddd, MMM DD, YYYY')}
-      </p>
-      <div className="pb-4 border-b border-slate-400">
-        {frontmatter.tags.map((tag) => (
-          <Link
-            href={`/tag/${tag}`}
-            key={tag}
-            className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 mr-3"
-          >
-            {tag}
-          </Link>
-        ))}
+      <h1 className="text-4xl font-bold text-black dark:text-white">{frontmatter.title}</h1>
+      <div className="flex items-center">
+        <div className="my-3">
+          {frontmatter.tags.map((tag) => (
+            <>
+              <Link
+                href={`/tags/${tag}`}
+                key={tag}
+                className="hover:text-slate dark:hover:text-text-slate-900 mr-3 text-slate-700 hover:border-b-2 dark:text-slate-300"
+              >
+                {tag}
+              </Link>
+            </>
+          ))}
+        </div>
+        <p className="my-3 text-gray-500 dark:text-gray-400">
+          {dayjs(frontmatter.date).format('dddd, MMM DD, YYYY')}
+        </p>
       </div>
-      <div className="prose dark:prose-invert max-w-none pt-4 px-2">{content}</div>
+      <div className="prose max-w-none px-2 pt-4 dark:prose-invert">{content}</div>
     </article>
   );
 }

@@ -46,14 +46,14 @@ export const MobileNav = ({ className }: { className?: string }) => {
 
   return (
     <motion.nav
-      className={clsxm('absolute top-0 left-0 bottom-0 mobile-nav', className)}
+      className={clsxm('mobile-nav absolute bottom-0 left-0 top-0', className)}
       initial={false}
       animate={isOpen ? 'open' : 'closed'}
       custom={height}
       ref={containerRef}
     >
       <motion.div
-        className="mobile-nav-background bg-slate-400 dark:bg-slate-800"
+        className="mobile-nav-background bg-gray-200 dark:bg-gray-800"
         variants={sidebar}
       />
       <Navigation className={hideNav ? 'block' : 'hidden'} />

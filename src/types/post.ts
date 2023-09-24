@@ -3,6 +3,7 @@ export interface PostHeader {
   tags: string[];
   slug: string;
   date: string;
+  pinned?: boolean;
   summary?: string;
   draft?: boolean;
 }

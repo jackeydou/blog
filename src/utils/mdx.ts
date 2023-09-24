@@ -27,8 +27,8 @@ export async function getFilesFrontMatter(limit?: number): Promise<PostHeader[]>
     const frontmatter = frontMatterCache.get(key)!;
     return limit ? frontmatter.slice(0, limit) : frontmatter;
   }
-  const allFrontMatter: PostHeader[] = [];
-
+  const nonPinnedFrontMatter: PostHeader[] = [];
+  const pinnedFrontMatters: PostHeader[] = [];
   allFiles.forEach((file) => {
     // Replace is needed to work on Windows
     const fileName = file.slice(prefixPaths.length + 1).replace(/\\/g, '/');
@@ -36,18 +36,28 @@ export async function getFilesFrontMatter(limit?: number): Promise<PostHeader[]>
     if (path.extname(fileName) === '.md' || path.extname(fileName) === '.mdx') {
       const source = fs.readFileSync(file, 'utf8');
       const { data: frontmatter } = matter(source);
-      if (frontmatter.draft !== true) {
-        allFrontMatter.push({
+      if (frontmatter.pinned) {
+        pinnedFrontMatters.push({
           ...frontmatter,
           slug: formatSlug(fileName),
-          date: new Date(frontmatter.date).toISOString(),
+          date: new Date(frontmatter.date ?? Date.now()).toISOString(),
         } as PostHeader);
+      } else {
+        if (frontmatter.draft !== true) {
+          nonPinnedFrontMatter.push({
+            ...frontmatter,
+            slug: formatSlug(fileName),
+            date: new Date(frontmatter.date ?? Date.now()).toISOString(),
+          } as PostHeader);
+        }
       }
     }
   });
-  const sortedMatter = allFrontMatter.sort((a, b) => dateSortDesc(a.date, b.date));
-  frontMatterCache.set(key, sortedMatter);
-  return limit ? sortedMatter.slice(0, limit) : sortedMatter;
+  const sortedNonPinnedMatters = nonPinnedFrontMatter.sort((a, b) => dateSortDesc(a.date, b.date));
+  const sortedPinnedMatters = pinnedFrontMatters.sort((a, b) => dateSortDesc(a.date, b.date));
+  const finalMatters = [...sortedPinnedMatters, ...sortedNonPinnedMatters];
+  frontMatterCache.set(key, finalMatters);
+  return limit ? finalMatters.slice(0, limit) : finalMatters;
 }
 
 export const kebabCase = (str: string) => slug(str);

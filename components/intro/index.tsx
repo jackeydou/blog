@@ -9,13 +9,13 @@ import { microReboundPreset } from '@/src/constants';
 import { ThemeButton } from '../side-nav/theme-btn';
 
 const introText = 'Say Hi👋 from ';
-const developerText = '<Developer at="Bytedance" />';
+const developerText = '<Developer @Bytedance />';
 const intro = [
   {
     text: introText,
     children: (
       <motion.span
-        className="text-green-600 dark:text-green-400 text-2xl"
+        className="text-2xl text-green-600 dark:text-green-400"
         initial={{
           opacity: 0.001,
           transform: 'translateY(10px)',
@@ -38,7 +38,7 @@ const intro = [
     text: developerText,
     children: (
       <motion.span
-        className="inline-block w-[2px] h-6 bg-slate-100 ml-1"
+        className="ml-1 inline-block h-6 w-[2px] bg-slate-100"
         initial={{
           opacity: 0.001,
         }}
@@ -63,7 +63,7 @@ export function Intro() {
   return (
     <Screen>
       <Wrapper>
-        <div className="relative px-4 lg:pl-16 flex justify-center min-h-screen w-full flex-col lg:pt-24">
+        <div className="relative flex min-h-screen w-full flex-col justify-center px-4 lg:pl-16 lg:pt-24">
           <MobileSideInfo className="md:hidden" />
           <motion.div
             className="group relative"
@@ -82,7 +82,7 @@ export function Intro() {
                   initialDelay={delayTime}
                   delay={delay}
                   spanClassName="text-xl lg:text-2xl"
-                  className="justify-center lg:justify-normal py-1 lg:py-4"
+                  className="justify-center py-1 lg:justify-normal lg:py-4"
                 >
                   {it.children}
                 </BubbleAnimationText>
@@ -90,7 +90,7 @@ export function Intro() {
             })}
           </motion.div>
           <motion.p
-            className="text-slate-500 dark:text-slate-400 text-sm mt-10 text-center lg:text-left"
+            className="mt-10 text-center text-sm text-slate-500 dark:text-slate-400 lg:text-left"
             initial={{ transform: 'translateY(10px)', opacity: 0.001 }}
             animate={{
               transform: 'translateY(0px)',
@@ -105,7 +105,7 @@ export function Intro() {
           </motion.p>
         </div>
         <motion.div
-          className="flex absolute bottom-2 left-0 right-0 items-center flex-col"
+          className="absolute bottom-2 left-0 right-0 flex flex-col items-center"
           initial={{ opacity: 0.001 }}
           animate={{
             opacity: 1,
@@ -120,7 +120,7 @@ export function Intro() {
             <FiChevronDown className="h-6 w-6 text-slate-950 dark:text-slate-50" />
           </span>
         </motion.div>
-        <div className="w-[50px] h-[50px] absolute top-4 right-4 flex justify-center items-center lg:hidden">
+        <div className="absolute right-4 top-4 flex h-[50px] w-[50px] items-center justify-center lg:hidden">
           <ThemeButton />
         </div>
       </Wrapper>
