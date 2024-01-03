@@ -15,7 +15,7 @@ export const Experiences: FC = () => {
       <Wrapper>
         <BubbleAnimationText text="Education & ">
           <motion.span
-            className="text-green-600 dark:text-green-400 text-2xl"
+            className="text-2xl text-green-600 dark:text-green-400"
             initial={{
               opacity: 0.001,
               transform: 'translateY(10px)',
@@ -49,39 +49,43 @@ export const Experiences: FC = () => {
                 },
               }}
             >
-              <div className="text-slate-800 dark:text-slate-200 timeline-t-p text-sm">
-                2022.11 - <span className="text-green-600 dark:text-green-400">present</span>
+              <div className="timeline-t-p text-sm text-slate-800 dark:text-slate-200">
+                2023.09 - <span className="text-green-600 dark:text-green-400">present</span>
               </div>
-              <p className="text-xl text-slate-900 dark:text-white my-2">
+              <p className="my-2 text-xl text-slate-900 dark:text-white">
+                Senior Software Engineer
+              </p>
+              <p className="text-xs text-slate-600 dark:text-slate-400">TikTok</p>
+            </motion.li>
+            <motion.li
+              className="timeline-item px-6 pb-8"
+              initial={{
+                opacity: 0.001,
+                transform: 'translateY(10px)',
+              }}
+              animate={{
+                opacity: 1,
+                transform: 'translateY(0px)',
+                transition: {
+                  ...microReboundPreset,
+                  delay: 1.3,
+                },
+              }}
+            >
+              <div className="timeline-t text-sm text-slate-800 dark:text-slate-200">
+                2019.07 - 2023.08
+              </div>
+              <p className="my-2 text-xl text-slate-900 dark:text-white">
                 Senior Software Engineer
               </p>
               <p className="text-xs text-slate-600 dark:text-slate-400">
                 Bytedance - Client Infra - Cross Platform
               </p>
-            </motion.li>
-            <motion.li
-              className="timeline-item px-6 pb-8"
-              initial={{
-                opacity: 0.001,
-                transform: 'translateY(10px)',
-              }}
-              animate={{
-                opacity: 1,
-                transform: 'translateY(0px)',
-                transition: {
-                  ...microReboundPreset,
-                  delay: 1.3,
-                },
-              }}
-            >
-              <div className="text-slate-800 dark:text-slate-200 timeline-t text-sm">
-                2019.07 - 2022.11
-              </div>
-              <p className="text-xl text-slate-900 dark:text-white my-2">
+              <p className="my-2 text-xl text-slate-900 dark:text-white">
                 Senior Frontend Engineer
               </p>
               <p className="text-xs text-slate-600 dark:text-slate-400">Bytedance - ECommerce</p>
-              <p className="text-xl text-slate-900 dark:text-white my-2">Frontend Engineer</p>
+              <p className="my-2 text-xl text-slate-900 dark:text-white">Frontend Engineer</p>
               <p className="text-xs text-slate-600 dark:text-slate-400">Bytedance - ECommerce</p>
             </motion.li>
             <motion.li
@@ -99,10 +103,10 @@ export const Experiences: FC = () => {
                 },
               }}
             >
-              <div className="text-slate-800 dark:text-slate-200 timeline-t text-sm">
+              <div className="timeline-t text-sm text-slate-800 dark:text-slate-200">
                 2018.11 - 2019.06
               </div>
-              <p className="text-xl text-slate-900 dark:text-white my-2">
+              <p className="my-2 text-xl text-slate-900 dark:text-white">
                 Frontend Engineer(Intern)
               </p>
               <p className="text-xs text-slate-600 dark:text-slate-400">Bytedance - ECommerce</p>
@@ -122,10 +126,10 @@ export const Experiences: FC = () => {
                 },
               }}
             >
-              <div className="text-slate-800 dark:text-slate-200 timeline-t text-sm">
+              <div className="timeline-t text-sm text-slate-800 dark:text-slate-200">
                 2015 - 2019
               </div>
-              <div className="text-xl text-slate-900 dark:text-white my-2">
+              <div className="my-2 text-xl text-slate-900 dark:text-white">
                 Bachelor Degree of Computer Science
               </div>
               <div className="text-xs text-slate-600 dark:text-slate-400">

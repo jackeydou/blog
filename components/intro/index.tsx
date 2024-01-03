@@ -55,7 +55,7 @@ const intro = [
     ),
   },
   {
-    text: 'INTJ / Climber / Spartan / ...',
+    text: 'ISTJ / Climber / Spartan / ...',
   },
 ];
 
